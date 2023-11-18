@@ -1,0 +1,8 @@
+.radix-themes {
+	--default-font-family: var(--font-open-sans);
+	color: #fff;
+	--container-4: 1300px;
+	--heading-font-size-adjust: 0.93;
+	--heading-line-height-9: 56px;
+	--font-weight-semibold: 600;
+}
