@@ -13,6 +13,7 @@ import FiveStars from '../UI/FiveStars'
 import Button from '../UI/Button'
 import TimDP from '../../../public/tim-dp.png'
 import { HappyCustomers } from '../HappyCustomers'
+import { TextWithCheckMark } from '../TextWithCheckMark'
 
 const Hero = () => {
 	return (
@@ -92,17 +93,6 @@ const Hero = () => {
 				</Flex>
 			</Container>
 		</Section>
-	)
-}
-
-const TextWithCheckMark = ({ children }) => {
-	return (
-		<Flex gap="4">
-			<Image src="/tick.svg" alt="check" width={20} height={20} />
-			<Text as="p" size="4">
-				{children}
-			</Text>
-		</Flex>
 	)
 }
 

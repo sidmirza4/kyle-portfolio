@@ -18,6 +18,8 @@ module.exports = {
 					'linear-gradient(92deg, #EA9324 22.66%, #EB7723 62.41%);',
 				'blue-gradient':
 					'linear-gradient(0deg, #EBF8FF 0%, rgba(255, 255, 255, 0.00) 100%);',
+				'blue-gradient-reverse':
+					'linear-gradient(180deg, #EBF8FF 0%, rgba(255, 255, 255, 0.00) 100%);',
 			},
 
 			filter: {
