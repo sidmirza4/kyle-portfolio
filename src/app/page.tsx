@@ -4,6 +4,7 @@ import Hero from '@/components/sections/Hero'
 import LearningSteps from '@/components/sections/LearningSteps'
 import Intro from '@/components/sections/Intro'
 import SimplifiedJS from '@/components/sections/SimplifiedJS'
+import Testimonial from '@/components/sections/Testimonial'
 
 export default function Home() {
 	return (
@@ -11,8 +12,9 @@ export default function Home() {
 			<Navbar />
 			<Hero />
 			<LearningSteps />
-			{/* <Intro /> */}
+			<Intro />
 			<SimplifiedJS />
+			<Testimonial />›
 		</div>
 	)
 }

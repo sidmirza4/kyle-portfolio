@@ -17,7 +17,7 @@ module.exports = {
 				'orange-gradient':
 					'linear-gradient(92deg, #EA9324 22.66%, #EB7723 62.41%);',
 				'blue-gradient':
-					'linear-gradient(0deg, #EBF8FF 0%, rgba(255, 255, 255, 0.00) 100%);',
+					'linear-gradient(360deg, #EBF8FF 0%, rgba(255, 255, 255, 0.00) 100%);',
 				'blue-gradient-reverse':
 					'linear-gradient(180deg, #EBF8FF 0%, rgba(255, 255, 255, 0.00) 100%);',
 			},
@@ -35,6 +35,10 @@ module.exports = {
 				'brand-bg-light': '#204354',
 				'brand-orange': '#EA9324',
 				'brand-white': '#FFF',
+			},
+
+			boxShadow: {
+				'testimonial-card': '0px 21px 33px 0px rgba(16, 25, 31, 0.04)',
 			},
 		},
 
