@@ -16,6 +16,13 @@ module.exports = {
 					'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 				'orange-gradient':
 					'linear-gradient(92deg, #EA9324 22.66%, #EB7723 62.41%);',
+				'blue-gradient':
+					'linear-gradient(0deg, #EBF8FF 0%, rgba(255, 255, 255, 0.00) 100%);',
+			},
+
+			filter: {
+				'shadow-default':
+					'drop-shadow(0px 10px 24px rgba(112, 144, 176, 0.22))',
 			},
 
 			colors: {
@@ -35,7 +42,8 @@ module.exports = {
 		},
 
 		fontSize: {
-			heading: '3.5rem',
+			heading: '3.5rem', // 56px
+			heading2: '2.8125rem', // 45px
 		},
 
 		fontWeight: {

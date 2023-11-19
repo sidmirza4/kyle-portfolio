@@ -5,7 +5,6 @@ import {
 	Flex,
 	Heading,
 	Section,
-	Strong,
 	Text,
 } from '@radix-ui/themes'
 import Image from 'next/image'
@@ -13,6 +12,7 @@ import React from 'react'
 import FiveStars from '../UI/FiveStars'
 import Button from '../UI/Button'
 import TimDP from '../../../public/tim-dp.png'
+import { HappyCustomers } from '../HappyCustomers'
 
 const Hero = () => {
 	return (
@@ -28,10 +28,9 @@ const Hero = () => {
 						<Box mb="5">
 							<HappyCustomers />
 						</Box>
-						<div className="flex flex-col gap-9">
+						<div className="flex flex-col gap-9 text-brand-white">
 							<Heading className="text-brand-white" size="9">
-								Stop Getting Stuck, Become A JavaScript
-								<br /> &#123;{' '}
+								Stop Getting Stuck, Become A JavaScript &#123;{' '}
 								<span className="text-brand-blue-dark">Developer</span> &#125;
 							</Heading>
 
@@ -93,17 +92,6 @@ const Hero = () => {
 				</Flex>
 			</Container>
 		</Section>
-	)
-}
-
-const HappyCustomers = () => {
-	return (
-		<div className="flex bg-brand-bg-light w-max px-[14px] py-[11px] rounded-[7px] gap-[7px]">
-			<FiveStars />
-			<Text className="text-brand-white">
-				<Strong>4.9/5</Strong> Based on <Strong>100+</Strong> Happy Customers
-			</Text>
-		</div>
 	)
 }
 
