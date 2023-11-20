@@ -1,5 +1,5 @@
 'use client'
-import { Box, Container, Flex, Heading, Section, Text } from '@radix-ui/themes'
+import { Container, Flex, Heading, Section, Text } from '@radix-ui/themes'
 import Image from 'next/image'
 import FiveStars from '../UI/FiveStars'
 import { HappyCustomers } from '../HappyCustomers'
