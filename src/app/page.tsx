@@ -12,9 +12,9 @@ export default function Home() {
 			<Navbar />
 			<Hero />
 			<LearningSteps />
-			<Intro />
+			{/* <Intro /> */}
 			<SimplifiedJS />
-			<Testimonial />›
+			<Testimonial />
 		</div>
 	)
 }
