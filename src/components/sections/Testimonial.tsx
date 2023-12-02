@@ -1,7 +1,6 @@
 'use client'
 import { Container, Flex, Heading, Section, Text } from '@radix-ui/themes'
 import Image from 'next/image'
-import FiveStars from '../UI/FiveStars'
 import { HappyCustomers } from '../HappyCustomers'
 import Button from '../UI/Button'
 import { useSpringCarousel } from 'react-spring-carousel'
@@ -10,40 +9,22 @@ import { useEffect, useState } from 'react'
 
 const testimonials = [
 	{
-		profile: '/caleb.png',
+		profile: '/andrew.png',
 		message:
-			"Kyle's content goes beyond the average in both quality and depth. With his dedication to excellence, there's no better option when it comes to learning web development.",
-		name: 'Caleb Curry',
+			"Cool, like that. I've used JS self taught for a while - for a long time I defaulted to Query, but I've recently started going back to basics and it's amazing the things that you miss when you're self taught. This is filling in a lot of gaps!",
+		name: 'Andrew Sharpe',
 	},
 	{
-		profile: '/claudio.png',
+		profile: '/fer.png',
 		message:
-			"Although I have a fundamental understanding of JavaScript, I learned a lot from the advanced sections of this course. Honestly, it's the most comprehensive JavaScript course I've ever seen",
-		name: 'Claudio Bernasconi',
+			'Thank you! This course was the perfect refresher a few months after learning react in bootcamp. :)',
+		name: 'Fer Wicker',
 	},
 	{
-		profile: '/jesse.png',
+		profile: '/bart.png',
 		message:
-			'Learning JavaScript can be daunting. Fortunately, Kyle is an amazing teacher. Not only will you learn JavaScript, but also how to think like a developer.',
-		name: 'Jesse Hall',
-	},
-	{
-		profile: '/caleb.png',
-		message:
-			"Kyle's content goes beyond the average in both quality and depth. With his dedication to excellence, there's no better option when it comes to learning web development.",
-		name: 'Caleb Curry',
-	},
-	{
-		profile: '/claudio.png',
-		message:
-			"Although I have a fundamental understanding of JavaScript, I learned a lot from the advanced sections of this course. Honestly, it's the most comprehensive JavaScript course I've ever seen",
-		name: 'Claudio Bernasconi',
-	},
-	{
-		profile: '/jesse.png',
-		message:
-			'Learning JavaScript can be daunting. Fortunately, Kyle is an amazing teacher. Not only will you learn JavaScript, but also how to think like a developer.',
-		name: 'Jesse Hall',
+			"Thanks for this course Kyle! It gave me the confidence to tackle a junior HTML/CSS project at Frontend Mentor (you can view my solution here: https://typemaster-landing-page-ten.vercel.app/) The code is still bulky, had to rewatch some videos multiple times and I had to google some stuff i didn't yet know, but hey, that's life of a developer I guess ;) Next stop: Javascript simplified :) kind regards,",
+		name: 'Bart Erkamp',
 	},
 ]
 
@@ -75,7 +56,7 @@ const Testimonial = () => {
 			gutter: 26,
 			itemsPerSlide: numberOfItemsPerSlide,
 			withLoop: true,
-			initialStartingPosition: 'center',
+			initialStartingPosition: 'start',
 			items: testimonials.map((testimonial) => {
 				return {
 					id: testimonial.name,
@@ -96,7 +77,8 @@ const Testimonial = () => {
 							className="!text-heading2 capitalize"
 							align="center"
 						>
-							hear it from out happly customers
+							Real Words From Our Satisfied{' '}
+							<span className="text-brand-blue">&#123; Devs &#125;</span>
 						</Heading>
 
 						<HappyCustomers transparent />
@@ -167,12 +149,12 @@ const TestimonialItem = ({
 					/>
 				</div>
 				<Flex align="center" direction="column" className="!gap-[20px]">
-					<FiveStars size={16} />
+					{/* <FiveStars size={16} /> */}
 					<Text align="center">&quot;{testimonial.message}&quot;</Text>
 					<Heading as="h6" size="3" className="capitalize">
 						{testimonial.name}
 					</Heading>
-					<Flex className="gap-[6px]">
+					{/* <Flex className="gap-[6px]">
 						<Image
 							src="/tick-circle.svg"
 							alt="tick-circle"
@@ -182,7 +164,7 @@ const TestimonialItem = ({
 						<Text size="2" className="text-brand-blue">
 							Verified Buyer
 						</Text>
-					</Flex>
+					</Flex> */}
 				</Flex>
 			</div>
 		</div>
