@@ -35,10 +35,15 @@ module.exports = {
 				'brand-bg-light': '#204354',
 				'brand-orange': '#EA9324',
 				'brand-white': '#FFF',
+				'border-defaut': '#C3D5E5',
 			},
 
 			boxShadow: {
 				'testimonial-card': '0px 21px 33px 0px rgba(16, 25, 31, 0.04)',
+			},
+
+			borderRadius: {
+				'7': '20px',
 			},
 		},
 
@@ -50,11 +55,16 @@ module.exports = {
 		fontSize: {
 			heading: '3.5rem', // 56px
 			heading2: '2.8125rem', // 45px
+			heading4: '1.375rem', // 22px
 		},
 
 		fontWeight: {
 			semibold: 600,
 			bolder: 800,
+		},
+
+		border: {
+			boxBorder: '1px solid #C3D5E5',
 		},
 	},
 }
