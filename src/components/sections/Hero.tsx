@@ -9,7 +9,6 @@ import {
 } from '@radix-ui/themes'
 import Image from 'next/image'
 import React from 'react'
-import FiveStars from '../UI/FiveStars'
 import Button from '../UI/Button'
 import TimDP from '../../../public/tim-dp.png'
 import { HappyCustomers } from '../HappyCustomers'
@@ -30,34 +29,43 @@ const Hero = () => {
 							<HappyCustomers />
 						</Box>
 						<div className="flex flex-col gap-9 text-brand-white">
-							<Heading className="text-brand-white" size="9">
-								Stop Getting Stuck, Become A JavaScript &#123;{' '}
-								<span className="text-brand-blue-dark">Developer</span> &#125;
+							<Heading
+								className="text-brand-white capitalize !leading-[110%] !text-[2.75rem]"
+								size="9"
+							>
+								Gain the confidence to build
+								<br /> any{' '}
+								<span className="text-brand-blue">
+									&#123; JavaScript &#125;
+								</span>{' '}
+								project and
+								<br /> land your dream job
 							</Heading>
 
 							<Box className="w-4/5">
 								<Text className="font-semibold" size="5">
-									Learn how to think like a developer and build any project you
-									can dream of by taking action instead of just following along
-									with tutorials.
+									JavaScript Simplified is a multi-step system for my community
+									of 14,000+ developers to build their dream projects and land
+									their dream jobs.
 								</Text>
 
 								<Flex direction="column" gap="4" mt="7">
 									<TextWithCheckMark>
-										Over <Text className="font-bolder">13 hours</Text> of
-										content across 74 videos
+										Get instant results with
+										<Text className="font-bolder"> easy-to-implement </Text>
+										training and projects
 									</TextWithCheckMark>
 
 									<TextWithCheckMark>
-										Exlusive access to{' '}
+										Cut the guesswork in our community of
+										<Text className="font-bolder"> 14,000 developers</Text>
+									</TextWithCheckMark>
+
+									<TextWithCheckMark>
+										Save time and money with{' '}
 										<Text className="font-bolder">
-											private Discord community
+											proven workflows and expert guidance
 										</Text>
-									</TextWithCheckMark>
-
-									<TextWithCheckMark>
-										Download all videos{' '}
-										<Text className="font-bolder">for offline access</Text>
 									</TextWithCheckMark>
 								</Flex>
 							</Box>
@@ -81,11 +89,11 @@ const Hero = () => {
 					</Box>
 
 					<Box width="100%">
-						<AspectRatio ratio={662 / 672}>
+						<AspectRatio ratio={690 / 700}>
 							<Image
 								src="/hero-image.png"
-								height={672}
-								width={662}
+								height={700}
+								width={690}
 								alt="hero"
 							/>
 						</AspectRatio>
@@ -103,15 +111,15 @@ const HeroTestimonial = () => {
 				<Image src={TimDP} alt="tim" />
 			</Box>
 			<Box>
-				<Flex justify="between" className="mb-[6px]">
-					<FiveStars />
-					<Flex gap="3">
-						<Image src="/youtube.svg" alt="youtube" width={19} height={19} />
-						<Text size="1">
-							<Text weight="bold">1.3M+</Text> Subscribers
-						</Text>
-					</Flex>
+				{/* <Flex justify="between" className="mb-[6px]"> */}
+				{/* <FiveStars /> */}
+				<Flex gap="3">
+					<Image src="/youtube.svg" alt="youtube" width={19} height={19} />
+					<Text size="1">
+						<Text weight="bold">1.3M+</Text> Subscribers
+					</Text>
 				</Flex>
+				{/* </Flex> */}
 				<Text size="1">
 					&#34;Kyle is a phenomenal instructor with an unmatched ability to
 					break down complex topics and make even the most challenging problems

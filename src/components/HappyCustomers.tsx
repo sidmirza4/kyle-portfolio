@@ -1,6 +1,7 @@
 import { Strong, Text } from '@radix-ui/themes'
 import React from 'react'
 import FiveStars from './UI/FiveStars'
+import Image from 'next/image'
 
 export const HappyCustomers = ({ transparent }: { transparent?: boolean }) => {
 	return (
@@ -9,13 +10,14 @@ export const HappyCustomers = ({ transparent }: { transparent?: boolean }) => {
 				transparent ? 'bg-transparent' : 'bg-brand-bg-light'
 			} w-max px-[14px] py-[11px] rounded-[7px] gap-[7px]`}
 		>
-			<FiveStars />
+			<Image src="/clubbedDPs.svg" alt="DP" width={86} height={22} />
 			<Text
 				className={`${
 					transparent ? 'text-brand-text-dark' : 'text-brand-white'
 				}`}
 			>
-				<Strong>4.9/5</Strong> Based on <Strong>100+</Strong> Happy Customers
+				{' '}
+				Trusted By <Strong>2400+</Strong> Students
 			</Text>
 		</div>
 	)
