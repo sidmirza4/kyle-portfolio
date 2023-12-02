@@ -23,7 +23,7 @@ const testimonials = [
 	{
 		profile: '/bart.png',
 		message:
-			"Thanks for this course Kyle! It gave me the confidence to tackle a junior HTML/CSS project at Frontend Mentor (you can view my solution here: https://typemaster-landing-page-ten.vercel.app/) The code is still bulky, had to rewatch some videos multiple times and I had to google some stuff i didn't yet know, but hey, that's life of a developer I guess ;) Next stop: Javascript simplified :) kind regards,",
+			"Thanks for this course Kyle! It gave me the confidence to tackle a junior HTML/CSS project at Frontend Mentor (you can view my solution here: <a target='_blank' class='text-brand-blue font-semibold' href='https://typemaster-landing-page-ten.vercel.app/'>https://typemaster-landing-page-ten.vercel.app/</a>) The code is still bulky, had to rewatch some videos multiple times and I had to google some stuff i didn't yet know, but hey, that's life of a developer I guess ;) Next stop: Javascript simplified :) kind regards,",
 		name: 'Bart Erkamp',
 	},
 ]
@@ -150,7 +150,12 @@ const TestimonialItem = ({
 				</div>
 				<Flex align="center" direction="column" className="!gap-[20px]">
 					{/* <FiveStars size={16} /> */}
-					<Text align="center">&quot;{testimonial.message}&quot;</Text>
+					<Text
+						align="center"
+						dangerouslySetInnerHTML={{
+							__html: `&ldquo;${testimonial.message}&rdquo;`,
+						}}
+					/>
 					<Heading as="h6" size="3" className="capitalize">
 						{testimonial.name}
 					</Heading>
