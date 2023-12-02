@@ -67,7 +67,7 @@ const Testimonial = () => {
 		})
 
 	return (
-		<Section className="text-brand-text-dark bg-blue-gradient">
+		<Section className="text-brand-text-dark !py-[6.25rem]">
 			<Container>
 				<Flex direction="column" gap="9">
 					<Flex align="center" direction="column">

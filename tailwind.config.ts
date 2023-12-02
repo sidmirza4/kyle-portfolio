@@ -36,6 +36,8 @@ module.exports = {
 				'brand-orange': '#EA9324',
 				'brand-white': '#FFF',
 				'border-defaut': '#C3D5E5',
+				'default-gray': '#F7F7F7',
+				placeholder: 'rgba(13, 22, 27, 0.4)',
 			},
 
 			boxShadow: {
@@ -45,26 +47,26 @@ module.exports = {
 			borderRadius: {
 				'7': '20px',
 			},
-		},
 
-		fontFamily: {
-			display: ['"Open Sans"', 'sans-serif'],
-			body: ['"Open Sans"', 'sans-serif'],
-		},
+			border: {
+				boxBorder: '1px solid #C3D5E5',
+			},
 
-		fontSize: {
-			heading: '3.5rem', // 56px
-			heading2: '2.8125rem', // 45px
-			heading4: '1.375rem', // 22px
-		},
+			fontFamily: {
+				display: ['"Open Sans"', 'sans-serif'],
+				body: ['"Open Sans"', 'sans-serif'],
+			},
 
-		fontWeight: {
-			semibold: 600,
-			bolder: 800,
-		},
+			fontSize: {
+				heading: '3.5rem', // 56px
+				heading2: '2.8125rem', // 45px
+				heading4: '1.375rem', // 22px
+			},
 
-		border: {
-			boxBorder: '1px solid #C3D5E5',
+			fontWeight: {
+				semibold: 600,
+				bolder: 800,
+			},
 		},
 	},
 }

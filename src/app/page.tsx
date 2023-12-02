@@ -7,6 +7,7 @@ import SimplifiedJS from '@/components/sections/SimplifiedJS'
 import Testimonial from '@/components/sections/Testimonial'
 import Benefits from '@/components/sections/Benefits'
 import Included from '@/components/sections/Included'
+import Pricing from '@/components/sections/Pricing'
 
 export default function Home() {
 	return (
@@ -19,6 +20,7 @@ export default function Home() {
 			<Included />
 			<SimplifiedJS />
 			<Testimonial />
+			<Pricing />
 		</div>
 	)
 }
