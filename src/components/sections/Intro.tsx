@@ -19,52 +19,53 @@ import FiveStars from '../UI/FiveStars'
 
 const Intro = () => {
 	return (
-		<section className="text-brand-text-dark">
-			<Flex align="center">
-				<div className="basis-auto pl-[125px]">
-					<Flex direction="column" gap="6">
-						<Box>
-							<HappyCustomers />
-							<Heading
-								className="!text-heading2"
-								weight="bold"
-								as="h2"
-								size="9"
-								mt="5"
-							>
-								Teaching You How To Connect <br />{' '}
-								<Text className="text-brand-blue">
-									{' '}
-									&#123; JavaScript &#125;
-								</Text>{' '}
-								Concepts
-							</Heading>
-						</Box>
-
-						<Text as="p" size="5" className="font-semibold">
-							Hi! My name is Kyle Cook! I have been a full stack web developer
-							since 2015 and I love JavaScript, but it wasn&#39;t always like
-							that.
-						</Text>
-
-						<Text>
-							I went through a four-year Computer Engineering program and
-							learned nothing about web development, so I spent countless nights
-							studying on my own and building fun projects in JavaScript.
-							Eventually I was able to learn enough JavaScript to comfortably
-							build any project I could think of and now my passion is sharing
-							that knowledge with you.
-						</Text>
-
-						<Button
-							textClassName="uppercase text-brand-white"
-							rightIcon={<Image src={RightArrow} alt="arrow" />}
+		<section className="text-brand-text-dark pl-[125px] bg-[url('/kyle.png')] bg-no-repeat bg-right bg-contain">
+			<div className="">
+				<Flex direction="column" gap="6" className="md:w-[50%] py-20">
+					<Box>
+						<HappyCustomers />
+						<Heading
+							className="!text-heading2"
+							weight="bold"
+							as="h2"
+							size="9"
+							mt="5"
 						>
-							Start learning now
-						</Button>
-					</Flex>
-				</div>
-				<div className="basis-[830px] shrink-0 relative">
+							It&apos; Not About What You Learn, But HOW
+							<br /> You Learn
+							<Text className="text-brand-blue">
+								{' '}
+								&#123; JavaScript &#125;
+							</Text>{' '}
+						</Heading>
+					</Box>
+
+					<Text as="p" size="5" className="font-semibold">
+						Hey there! I&apos;m Kyle Cook, and not too long ago, I walked in
+						your shoes — driven, motivated to bring my coding dreams to life. I
+						tried countless, maybe even thousands of JavaScript tutorials hoping
+						to find my way in the coding world.
+					</Text>
+
+					<Text>
+						But reality hit hard, and I started questioning if coding was really
+						for me. I was stuck, constantly Googling basic issues, thinking I
+						was the problem. It wasn&apos;t until later that I realized that
+						something was off.. The tutorials I followed lacked the essential
+						concepts I needed to truly grasp JavaScript. My practice methods
+						were even worse, causing 99% frustration and 1% progress..... Read
+						more
+					</Text>
+
+					<Button
+						textClassName="uppercase text-brand-white"
+						rightIcon={<Image src={RightArrow} alt="arrow" />}
+					>
+						Start learning now
+					</Button>
+				</Flex>
+			</div>
+			{/* <div className="basis-[830px] shrink-0 relative">
 					<Image src={KyleProfileImage} alt="Kyle" />
 					<TestimonialBox
 						profile="/test-dp.png"
@@ -81,8 +82,7 @@ const Intro = () => {
 						“When I watch tutorials it all makes sense, but when I try to do it
 						on my own I get stuck.”
 					</TestimonialBox>
-				</div>
-			</Flex>
+				</div> */}
 		</section>
 	)
 }
