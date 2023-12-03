@@ -9,6 +9,7 @@ import Benefits from '@/components/sections/Benefits'
 import Included from '@/components/sections/Included'
 import Pricing from '@/components/sections/Pricing'
 import FAQ from '@/components/sections/FAQ'
+import Footer from '@/components/sections/Footer'
 
 export default function Home() {
 	return (
@@ -23,6 +24,7 @@ export default function Home() {
 			<Testimonial />
 			<Pricing />
 			<FAQ />
+			<Footer />
 		</div>
 	)
 }
