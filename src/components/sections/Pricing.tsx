@@ -105,7 +105,7 @@ const Pricing = () => {
 				<Flex
 					gap="4"
 					align="center"
-					className="[&>*:nth-child(odd)]:bg-default-gray [&>*:nth-child(2)]:bg-brand-white [&>*:nth-child(2)]:border-8 [&>*:nth-child(2)]:border-brand-blue"
+					className="[&>*:nth-child(odd)]:bg-default-gray [&>*:nth-child(2)]:bg-brand-white [&>*:nth-child(2)]:border-8 [&>*:nth-child(2)]:border-brand-blue [&>*:nth-child(2)]:shadow-blue-shadow"
 				>
 					{packages.map((p) => (
 						<PricingCard p={p} key={p.name} />
