@@ -21,7 +21,7 @@ const Button = (props: ButtonProps) => {
 
 	return (
 		<button
-			className={`w-max rounded-5 py-5 px-12 ${fullWidth && '!w-full'} 
+			className={`w-max rounded-5 py-4 px-12 ${fullWidth && '!w-full'} 
 				${
 					outline
 						? 'border-2 border-brand-orange bg-transparent'
