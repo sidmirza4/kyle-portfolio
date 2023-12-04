@@ -69,15 +69,27 @@ const faqs = [
 
 const FAQ = () => {
 	return (
-		<Section className="py-[6.25rem] text-brand-white bg-brand-bg-dark">
+		<Section className="text-brand-white bg-brand-bg-dark">
 			<Container>
-				<Box mb="9">
-					<Heading size="9" className="!text-heading2 !mb-8" align="center">
+				<Box
+					mb={{
+						initial: '4',
+						md: '9',
+					}}
+				>
+					<Heading className="md:!mb-8 !mb-4" align="center">
 						Frequently Asked{' '}
 						<span className="text-brand-blue">&#123; Questions &#125;</span>
 					</Heading>
 
-					<Text size="5" as="p" align="center">
+					<Text
+						size={{
+							initial: '3',
+							md: '5',
+						}}
+						as="p"
+						align="center"
+					>
 						If you need further assistance, feel free to email me at
 						kyle@webdevsimplified.com
 					</Text>
@@ -89,7 +101,9 @@ const FAQ = () => {
 						{faqs.map((f) => (
 							<>
 								<AccordionItem value={f.question} key={f.question}>
-									<AccordionTrigger>{f.question}</AccordionTrigger>
+									<AccordionTrigger className="text-left !text-3">
+										{f.question}
+									</AccordionTrigger>
 									<AccordionContent>
 										<Text dangerouslySetInnerHTML={{ __html: f.answer }} />
 									</AccordionContent>
