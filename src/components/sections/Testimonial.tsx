@@ -5,7 +5,8 @@ import { HappyCustomers } from '../HappyCustomers'
 import Button from '../UI/Button'
 import { useSpringCarousel } from 'react-spring-carousel'
 import { getBreakpoints } from '@/utils/getBreakpoints'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { cn } from '@/lib/utils'
 
 const testimonials = [
 	{
@@ -27,6 +28,28 @@ const testimonials = [
 		name: 'Bart Erkamp',
 	},
 ]
+
+const CarouselPrevItemButton = (props: React.ButtonHTMLAttributes<{}>) => {
+	return (
+		<button
+			onClick={props.onClick}
+			className={cn('absolute z-10', props.className)}
+		>
+			<Image src="/carousel-back.svg" alt="arrow" width={36} height={36} />
+		</button>
+	)
+}
+
+const CarouselNextItemButton = (props: React.ButtonHTMLAttributes<{}>) => {
+	return (
+		<button
+			onClick={props.onClick}
+			className={cn('absolute z-10', props.className)}
+		>
+			<Image src="/carousel-next.svg" alt="arrow" width={36} height={36} />
+		</button>
+	)
+}
 
 const Testimonial = () => {
 	const [numberOfItemsPerSlide, setNumberOfItemsPerSlide] = useState(1)
@@ -67,15 +90,17 @@ const Testimonial = () => {
 		})
 
 	return (
-		<Section className="text-brand-text-dark !py-[6.25rem]">
+		<Section className="text-brand-text-dark">
 			<Container>
-				<Flex direction="column" gap="9">
+				<Flex
+					direction="column"
+					gap={{
+						initial: '6',
+						md: '9',
+					}}
+				>
 					<Flex align="center" direction="column">
-						<Heading
-							size="9"
-							className="!text-heading2 capitalize"
-							align="center"
-						>
+						<Heading className="capitalize !mb-1" align="center">
 							Real Words From Our Satisfied{' '}
 							<span className="text-brand-blue">&#123; Devs &#125;</span>
 						</Heading>
@@ -84,35 +109,34 @@ const Testimonial = () => {
 					</Flex>
 					<div className="relative">
 						<div className="overflow-hidden pl-px">
-							<button
+							<CarouselPrevItemButton
 								onClick={slideToPrevItem}
-								className="absolute -translate-x-1/2 top-1/2 z-10"
-							>
-								<Image
-									src="/carousel-back.svg"
-									alt="arrow"
-									width={36}
-									height={36}
-								/>
-							</button>
-							{carouselFragment}
-							<button
+								className="md:block hidden -translate-x-1/2 top-1/2"
+							/>
+							<div>
+								{carouselFragment}
+								<Flex className="!gap-5" align="center" justify="center">
+									<CarouselPrevItemButton
+										onClick={slideToPrevItem}
+										className="block md:hidden relative"
+									/>
+									<CarouselNextItemButton
+										onClick={slideToNextItem}
+										className="block md:hidden relative"
+									/>
+								</Flex>
+							</div>
+							<CarouselNextItemButton
 								onClick={slideToNextItem}
-								className="absolute translate-x-1/2 right-0 top-1/2 z-10"
-							>
-								<Image
-									src="/carousel-next.svg"
-									alt="arrow"
-									width={36}
-									height={36}
-								/>
-							</button>
+								className="md:block hidden translate-x-1/2 right-0 top-1/2"
+							/>
 						</div>
 					</div>
 				</Flex>
 
 				<Flex justify="center" className="mt-[3.75rem]">
 					<Button
+						className="hidden md:block"
 						textClassName="uppercase text-brand-white"
 						rightIcon={
 							<Image
