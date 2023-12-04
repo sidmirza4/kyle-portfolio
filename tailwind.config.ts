@@ -1,3 +1,4 @@
+// @ts-ignore
 import { radixThemePreset } from 'radix-themes-tw'
 
 /** @type {import('tailwindcss').Config} */
