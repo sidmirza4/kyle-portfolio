@@ -31,7 +31,11 @@ const LearningSteps = () => {
 	return (
 		<Section className="text-brand-text-dark bg-blue-gradient">
 			<Container>
-				<Heading className="capitalize" weight="bold" align="center">
+				<Heading
+					className="capitalize text-ellipsis"
+					weight="bold"
+					align="center"
+				>
 					From Basic Concepts To In 3 Easy Steps{' '}
 					<Text className="text-brand-blue">
 						&#123; Complex Projects &#125;
@@ -42,7 +46,7 @@ const LearningSteps = () => {
 
 				<Text
 					as="p"
-					className="font-semibold !mt-8"
+					className="font-semibold md:!mt-8 !mt-4"
 					size={{
 						initial: '3',
 						md: '5',
@@ -52,8 +56,11 @@ const LearningSteps = () => {
 					No more confusion. Just clear, hands-on building.
 				</Text>
 
-				<Box className="mt-[3.75rem]">
-					<Flex gap="4" justify="between" className="flex-col md:flex-row">
+				<Box className="md:mt-[3.75rem] mt-8">
+					<Flex
+						justify="between"
+						className="flex-col md:flex-row !gap-8 md:gap-4"
+					>
 						{learningSteps.map((ls) => (
 							<StepItem stepItem={ls} key={ls.title} />
 						))}
@@ -70,9 +77,19 @@ const StepItem = ({
 	stepItem: (typeof learningSteps)[number]
 }) => {
 	return (
-		<Flex gap="6" direction="column" align="center" className="text-center">
+		<Flex
+			gap={{
+				initial: '3',
+				md: '6',
+			}}
+			direction="column"
+			align="center"
+			className="text-center"
+		>
 			<Image src={stepItem.cover} alt="Cover-1" />
-			<Heading size="6">{stepItem.title}</Heading>
+			<Heading size="6" as="h4">
+				{stepItem.title}
+			</Heading>
 			<div className="md:w-10/12">
 				<Text>{stepItem.description}</Text>
 			</div>

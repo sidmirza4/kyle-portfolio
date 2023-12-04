@@ -21,10 +21,10 @@ const Intro = () => {
 		<section className="text-brand-text-dark bg-none md:bg-[url('/kyle.png')] bg-no-repeat bg-right bg-contain">
 			<Container>
 				<div className="">
-					<Flex direction="column" gap="6" className="lg:w-[50%] py-20">
+					<Flex direction="column" gap="6" className="lg:w-[50%]">
 						<Box>
 							<HappyCustomers />
-							<Heading className="!text-heading2" weight="bold" size="9" mt="5">
+							<Heading weight="bold" mt="5">
 								It&apos; Not About What You Learn, But HOW
 								<br /> You Learn
 								<Text className="text-brand-blue">
@@ -34,7 +34,14 @@ const Intro = () => {
 							</Heading>
 						</Box>
 
-						<Text as="p" size="5" className="font-semibold">
+						<Text
+							as="p"
+							size={{
+								initial: '3',
+								md: '5',
+							}}
+							className="font-semibold"
+						>
 							Hey there! I&apos;m Kyle Cook, and not too long ago, I walked in
 							your shoes — driven, motivated to bring my coding dreams to life.
 							I tried countless, maybe even thousands of JavaScript tutorials

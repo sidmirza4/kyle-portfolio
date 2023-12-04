@@ -64,20 +64,32 @@ const benefits = [
 
 const Benefits = () => {
 	return (
-		<Section className="py-[6.25rem] bg-blue-gradient-reverse text-brand-text-dark">
+		<Section className="bg-blue-gradient-reverse text-brand-text-dark">
 			<Container>
-				<Flex direction="column" gap="9">
+				<Flex
+					direction="column"
+					gap={{
+						initial: '6',
+						md: '9',
+					}}
+				>
 					<Box>
 						<Heading
-							className="!text-heading2 !mb-[1.875rem]"
+							className="mb-5 md:!mb-[1.875rem]"
 							weight="bold"
-							size="9"
 							align="center"
 						>
 							Top Benefits
 						</Heading>
 
-						<Text align="center" size="5" as="div">
+						<Text
+							align="center"
+							size={{
+								initial: '3',
+								md: '5',
+							}}
+							as="div"
+						>
 							Explore the multitude of perks that come with JavaScript
 							Simplified
 						</Text>
@@ -116,7 +128,10 @@ const Benefits = () => {
 
 const BenefitItem = ({ benefit }: { benefit: (typeof benefits)[number] }) => {
 	return (
-		<Flex className="p-5 rounded-7 border border-border-defaut" align="center">
+		<Flex
+			className="md:p-5 p-4 rounded-7 border border-border-defaut"
+			align="center"
+		>
 			<Flex className="gap-[.625rem] flex-col md:flex-row" align="center">
 				<Image
 					src={benefit.icon}
@@ -125,10 +140,17 @@ const BenefitItem = ({ benefit }: { benefit: (typeof benefits)[number] }) => {
 					alt={benefit.title}
 				/>
 				<Box>
-					<Heading className="!text-heading4" size="6" mb="4">
+					<Heading as="h6" mb="4">
 						{benefit.title}
 					</Heading>
-					<Text>{benefit.description}</Text>
+					<Text
+						size={{
+							initial: '2',
+							md: '3',
+						}}
+					>
+						{benefit.description}
+					</Text>
 				</Box>
 			</Flex>
 		</Flex>
