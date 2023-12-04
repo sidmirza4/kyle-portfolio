@@ -1,13 +1,6 @@
 'use client'
 
-import {
-	Box,
-	Container,
-	Heading,
-	Section,
-	Separator,
-	Text,
-} from '@radix-ui/themes'
+import { Box, Container, Heading, Section, Text } from '@radix-ui/themes'
 import React from 'react'
 import {
 	Accordion,

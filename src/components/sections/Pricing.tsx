@@ -128,7 +128,7 @@ const PricingCard = ({ p }: { p: (typeof packages)[number] }) => {
 			border-border-defaut
 			rounded-7
 			shadow-testimonial-card
-			pt-12 md:px-6 px-3 pb-[1.75rem] flex-1 relative w-80 md:w-auto
+			pt-12 md:px-6 px-3 pb-[1.75rem] flex-1 relative w-full sm:w-auto max-w-[400px]
 			`}
 		>
 			<Text as="p" align="center" className="uppercase" mb="4" weight="bold">

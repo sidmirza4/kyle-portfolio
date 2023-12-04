@@ -12,7 +12,7 @@ import Hamburger from '../../public/hamburger.svg'
 
 const Navbar = () => {
 	return (
-		<Container className="bg-[#141D25] border-b border-[#ffffff21] border-opacity-10 py-6 px-5 xl:px-0">
+		<Container className="bg-[#141D25] border-b border-[#ffffff21] border-opacity-10 md:py-6 py-[15px] md:px-5 px-8 xl:px-0">
 			<Flex justify="between" align="center">
 				<div className="sm:hidden shrink">
 					<Popover>

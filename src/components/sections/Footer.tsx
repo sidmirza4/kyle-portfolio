@@ -15,17 +15,24 @@ import Button from '../UI/Button'
 
 const Footer = () => {
 	return (
-		<Section className="text-brand-text-dark !py-[6.25rem]">
+		<Section className="text-brand-text-dark">
 			<Container>
 				<Flex align="center" gap="7">
 					<Flex direction="column" gap="6">
-						<Heading size="9" className="!text-heading2">
+						<Heading>
 							Looking for a{' '}
 							<Text className="text-brand-blue">&#123; JavaScript &#125;</Text>{' '}
 							course that&apos;s anything but average?
 						</Heading>
 
-						<Text className="font-semibold" size="5" as="p">
+						<Text
+							className="font-semibold"
+							size={{
+								initial: '3',
+								md: '5',
+							}}
+							as="p"
+						>
 							Learn gradually, at your own pace, and master each concept until
 							you&apos;re capable of crafting complex projects from scratch.
 						</Text>
