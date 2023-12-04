@@ -31,12 +31,7 @@ const LearningSteps = () => {
 	return (
 		<Section className="text-brand-text-dark bg-blue-gradient">
 			<Container>
-				<Heading
-					className="!text-heading2 leading-9 capitalize"
-					weight="bold"
-					align="center"
-					size="9"
-				>
+				<Heading className="capitalize" weight="bold" align="center">
 					From Basic Concepts To In 3 Easy Steps{' '}
 					<Text className="text-brand-blue">
 						&#123; Complex Projects &#125;
@@ -45,7 +40,15 @@ const LearningSteps = () => {
 					In 3 Simple Steps
 				</Heading>
 
-				<Text as="p" className="font-semibold !mt-8" size="5" align="center">
+				<Text
+					as="p"
+					className="font-semibold !mt-8"
+					size={{
+						initial: '3',
+						md: '5',
+					}}
+					align="center"
+				>
 					No more confusion. Just clear, hands-on building.
 				</Text>
 
