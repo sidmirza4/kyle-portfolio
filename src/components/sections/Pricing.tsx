@@ -99,15 +99,17 @@ const Pricing = () => {
 	return (
 		<Section className="py-[6.25rem] text-brand-text-dark bg-blue-gradient-reverse">
 			<Container>
-				<Heading size="9" className="!text-heading2 !mb-20" align="center">
+				<Heading className="!mb-14 md:!mb-20" align="center">
 					Everything You Need To Build At Any Level
 				</Heading>
 
 				<Flex
 					align="center"
 					className={cn(
-						'[&>*:nth-child(odd)]:bg-default-gray [&>*:nth-child(2)]:bg-brand-white [&>*:nth-child(2)]:border-8 [&>*:nth-child(2)]:border-brand-blue [&>*:nth-child(2)]:shadow-blue-shadow',
-						'flex-col md:flex-row gap-12 md:gap-7'
+						'[&>*:nth-child(odd)]:bg-default-gray [&>*:nth-child(2)]:bg-brand-white [&>*:nth-child(2)]:border-4 md:[&>*:nth-child(2)]:border-8 [&>*:nth-child(2)]:border-brand-blue [&>*:nth-child(2)]:shadow-blue-shadow',
+						'flex-col md:flex-row gap-12 md:gap-7',
+						'[&>*:nth-child(odd)]:order-2 md:[&>*:nth-child(odd)]:order-none',
+						'[&>*:nth-child(2)]:order-1 md:[&>*:nth-child(2)]:order-none'
 					)}
 				>
 					{packages.map((p) => (
@@ -126,7 +128,7 @@ const PricingCard = ({ p }: { p: (typeof packages)[number] }) => {
 			border-border-defaut
 			rounded-7
 			shadow-testimonial-card
-			pt-12 px-6 pb-[1.75rem] flex-1 relative w-80 md:w-auto
+			pt-12 md:px-6 px-3 pb-[1.75rem] flex-1 relative w-80 md:w-auto
 			`}
 		>
 			<Text as="p" align="center" className="uppercase" mb="4" weight="bold">
@@ -141,7 +143,7 @@ const PricingCard = ({ p }: { p: (typeof packages)[number] }) => {
 					</Text>
 				</Flex>
 
-				<Separator />
+				<Separator className="!w-full" />
 
 				<Box className="min-h-[27rem]">
 					<Flex className="gap-5" direction="column">
@@ -168,7 +170,7 @@ const PricingCard = ({ p }: { p: (typeof packages)[number] }) => {
 			{/* BADGE */}
 			{p.badge && (
 				<div
-					className={`py-3 px-4 text-[17px] font-bold ${p.badgeBG} inline-block rounded-3 uppercase text-brand-white absolute left-1/2 -translate-x-1/2 top-0 -translate-y-1/2`}
+					className={`py-2 px-6 text-[17px] w-max font-bold ${p.badgeBG} inline-block rounded-3 uppercase text-brand-white absolute left-1/2 -translate-x-1/2 top-0 -translate-y-1/2`}
 				>
 					{p.badge}
 				</div>
