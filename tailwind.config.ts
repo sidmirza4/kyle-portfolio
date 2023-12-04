@@ -61,6 +61,7 @@ module.exports = {
 			fontSize: {
 				heading: '3.5rem', // 56px
 				heading2: '2.8125rem', // 45px
+				heading3: '1.625rem', // 26px
 				heading4: '1.375rem', // 22px
 			},
 
@@ -84,5 +85,15 @@ module.exports = {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 			},
 		},
+
+		screens: {
+			xs: '360px',
+			sm: '640px',
+			md: '900px',
+			lg: '1370px',
+			xl: '1500px',
+		},
 	},
+
+	plugins: [require('tailwindcss-animate')],
 }

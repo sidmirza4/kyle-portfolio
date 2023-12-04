@@ -72,7 +72,6 @@ const Testimonial = () => {
 				<Flex direction="column" gap="9">
 					<Flex align="center" direction="column">
 						<Heading
-							as="h2"
 							size="9"
 							className="!text-heading2 capitalize"
 							align="center"

@@ -29,10 +29,7 @@ const Hero = () => {
 							<HappyCustomers />
 						</Box>
 						<div className="flex flex-col gap-9 text-brand-white">
-							<Heading
-								className="text-brand-white capitalize !leading-[110%] !text-[2.75rem]"
-								size="9"
-							>
+							<Heading className="text-brand-white capitalize" size="9">
 								Gain the confidence to build
 								<br /> any{' '}
 								<span className="text-brand-blue">
@@ -43,7 +40,13 @@ const Hero = () => {
 							</Heading>
 
 							<Box className="w-4/5">
-								<Text className="font-semibold" size="5">
+								<Text
+									className="font-semibold"
+									size={{
+										initial: '3',
+										md: '5',
+									}}
+								>
 									JavaScript Simplified is a multi-step system for my community
 									of 14,000+ developers to build their dream projects and land
 									their dream jobs.
@@ -88,7 +91,7 @@ const Hero = () => {
 						</div>
 					</Box>
 
-					<Box width="100%">
+					<Box width="100%" className="hidden lg:block">
 						<AspectRatio ratio={690 / 700}>
 							<Image
 								src="/hero-image.png"
@@ -106,19 +109,37 @@ const Hero = () => {
 
 const HeroTestimonial = () => {
 	return (
-		<Flex gap="4">
-			<Box className="shrink-0">
+		<Flex gap="4" className="flex-col md:flex-row">
+			<Flex
+				className="shrink-0"
+				align={{
+					initial: 'center',
+					md: 'start',
+				}}
+				gap="5"
+			>
 				<Image src={TimDP} alt="tim" />
-			</Box>
+				<div className="block md:hidden">
+					<Flex gap="3">
+						<Image src="/youtube.svg" alt="youtube" width={19} height={19} />
+						<Text size="1">
+							<Text weight="bold">1.3M+</Text> Subscribers
+						</Text>
+					</Flex>
+				</div>
+			</Flex>
+
 			<Box>
 				{/* <Flex justify="between" className="mb-[6px]"> */}
 				{/* <FiveStars /> */}
-				<Flex gap="3">
-					<Image src="/youtube.svg" alt="youtube" width={19} height={19} />
-					<Text size="1">
-						<Text weight="bold">1.3M+</Text> Subscribers
-					</Text>
-				</Flex>
+				<div className="hidden md:block">
+					<Flex gap="3">
+						<Image src="/youtube.svg" alt="youtube" width={19} height={19} />
+						<Text size="1">
+							<Text weight="bold">1.3M+</Text> Subscribers
+						</Text>
+					</Flex>
+				</div>
 				{/* </Flex> */}
 				<Text size="1">
 					&#34;Kyle is a phenomenal instructor with an unmatched ability to

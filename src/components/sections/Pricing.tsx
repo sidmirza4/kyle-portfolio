@@ -10,6 +10,7 @@ import {
 	Text,
 } from '@radix-ui/themes'
 import Button from '../UI/Button'
+import { cn } from '@/lib/utils'
 
 const packages = [
 	{
@@ -103,9 +104,11 @@ const Pricing = () => {
 				</Heading>
 
 				<Flex
-					gap="4"
 					align="center"
-					className="[&>*:nth-child(odd)]:bg-default-gray [&>*:nth-child(2)]:bg-brand-white [&>*:nth-child(2)]:border-8 [&>*:nth-child(2)]:border-brand-blue [&>*:nth-child(2)]:shadow-blue-shadow"
+					className={cn(
+						'[&>*:nth-child(odd)]:bg-default-gray [&>*:nth-child(2)]:bg-brand-white [&>*:nth-child(2)]:border-8 [&>*:nth-child(2)]:border-brand-blue [&>*:nth-child(2)]:shadow-blue-shadow',
+						'flex-col md:flex-row gap-12 md:gap-7'
+					)}
 				>
 					{packages.map((p) => (
 						<PricingCard p={p} key={p.name} />
@@ -123,7 +126,8 @@ const PricingCard = ({ p }: { p: (typeof packages)[number] }) => {
 			border-border-defaut
 			rounded-7
 			shadow-testimonial-card
-			pt-12 px-6 pb-[1.75rem] flex-1 relative`}
+			pt-12 px-6 pb-[1.75rem] flex-1 relative w-80 md:w-auto
+			`}
 		>
 			<Text as="p" align="center" className="uppercase" mb="4" weight="bold">
 				{p.name} package

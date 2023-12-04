@@ -71,7 +71,6 @@ const Benefits = () => {
 						<Heading
 							className="!text-heading2 !mb-[1.875rem]"
 							weight="bold"
-							as="h2"
 							size="9"
 							align="center"
 						>
@@ -84,7 +83,11 @@ const Benefits = () => {
 						</Text>
 					</Box>
 
-					<Grid columns="2" width="auto" gapX="7" gapY="6">
+					<Grid
+						columns="2"
+						width="auto"
+						className="gap-y-4 gap-x-[1.6rem] lg:gap-y-[1.875rem] lg:gap-x-[2.875rem]"
+					>
 						{benefits.map((b) => (
 							<BenefitItem benefit={b} key={b.title} />
 						))}
@@ -114,7 +117,7 @@ const Benefits = () => {
 const BenefitItem = ({ benefit }: { benefit: (typeof benefits)[number] }) => {
 	return (
 		<Flex className="p-5 rounded-7 border border-border-defaut" align="center">
-			<Flex className="gap-[.625rem]" align="center">
+			<Flex className="gap-[.625rem] flex-col md:flex-row" align="center">
 				<Image
 					src={benefit.icon}
 					height={100}

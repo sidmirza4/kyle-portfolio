@@ -1,18 +1,9 @@
-import {
-	AspectRatio,
-	Box,
-	Container,
-	Flex,
-	Heading,
-	Section,
-	Text,
-} from '@radix-ui/themes'
+import { Box, Container, Flex, Heading, Section, Text } from '@radix-ui/themes'
 import React from 'react'
 
 import LearningStep1Image from '../../../public/learning-step-1.svg'
 import LearningStep2Image from '../../../public/learning-step-2.svg'
 import LearningStep3Image from '../../../public/learning-step-3.svg'
-import Wave from '../../../public/wave.png'
 import Image from 'next/image'
 
 const learningSteps = [
@@ -41,7 +32,6 @@ const LearningSteps = () => {
 		<Section className="text-brand-text-dark bg-blue-gradient">
 			<Container>
 				<Heading
-					as="h2"
 					className="!text-heading2 leading-9 capitalize"
 					weight="bold"
 					align="center"
@@ -60,7 +50,7 @@ const LearningSteps = () => {
 				</Text>
 
 				<Box className="mt-[3.75rem]">
-					<Flex gap="4" justify="between">
+					<Flex gap="4" justify="between" className="flex-col md:flex-row">
 						{learningSteps.map((ls) => (
 							<StepItem stepItem={ls} key={ls.title} />
 						))}

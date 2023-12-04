@@ -9,7 +9,7 @@ const SimplifiedJS = () => {
 		<Section className="text-brand-text-dark !py-[6.25rem] bg-blue-gradient">
 			<Container>
 				<Flex direction="column" gap="5" mb="9">
-					<Heading as="h2" className="!text-heading2" size="9" align="center">
+					<Heading className="!text-heading2" size="9" align="center">
 						With{' '}
 						<Text className="text-brand-blue">&#123; JavsScript &#125;</Text>{' '}
 						Simplified, Your Learning Curve Becomes Structured, Practical &
@@ -26,7 +26,7 @@ const SimplifiedJS = () => {
 
 				<Flex direction="column" className="gap-16">
 					<Flex align="center" gap="9">
-						<div className="min-w-[50%]">
+						<div className="min-w-[50%] hidden md:block">
 							<div className="aspect-square w-full h-full flex items-center">
 								<Image
 									src="/learn-project.png"
@@ -115,7 +115,7 @@ const SimplifiedJS = () => {
 							</Flex>
 						</Flex>
 
-						<div className="min-w-[50%]">
+						<div className="min-w-[50%] hidden md:block">
 							<div className="aspect-auto w-full h-full flex items-center justify-end">
 								<Image
 									src="/helpful-community.png"
@@ -128,7 +128,7 @@ const SimplifiedJS = () => {
 					</Flex>
 
 					<Flex align="center" gap="9">
-						<div className="min-w-[50%]">
+						<div className="min-w-[50%] hidden md:block">
 							<div className="aspect-auto w-full h-full flex items-center">
 								<Image
 									src="/land-job.png"

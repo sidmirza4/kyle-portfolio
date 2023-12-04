@@ -21,7 +21,9 @@ const Button = (props: ButtonProps) => {
 
 	return (
 		<button
-			className={`w-max rounded-5 py-4 px-12 ${fullWidth && '!w-full'} 
+			className={`w-max rounded-5 md:py-4 md:px-12 py-3 px-9 ${
+				fullWidth && '!w-full'
+			} 
 				${
 					outline
 						? 'border-2 border-brand-orange bg-transparent'
@@ -31,7 +33,13 @@ const Button = (props: ButtonProps) => {
 			{...rest}
 		>
 			<Flex gap="3" align="center" justify="center">
-				<Text className={`font-bolder ${textClassName}`} size="5">
+				<Text
+					className={`font-bolder ${textClassName}`}
+					size={{
+						initial: '3',
+						md: '5',
+					}}
+				>
 					{children}
 				</Text>
 

@@ -62,7 +62,7 @@ const Footer = () => {
 						</Button>
 					</Flex>
 
-					<Box width="100%">
+					<Box width="100%" className="hidden md:block">
 						<AspectRatio ratio={624 / 486}>
 							<Image
 								src="/footer-poster.svg"
