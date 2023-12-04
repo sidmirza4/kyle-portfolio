@@ -61,6 +61,7 @@ module.exports = {
 			fontSize: {
 				heading: '3.5rem', // 56px
 				heading2: '2.8125rem', // 45px
+				headingLg: '1.875rem', // 30px
 				heading3: '1.625rem', // 26px
 				heading4: '1.375rem', // 22px
 				heading6: '1rem', // 16px

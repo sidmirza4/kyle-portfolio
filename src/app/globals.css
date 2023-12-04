@@ -30,6 +30,10 @@ h1 {
 	@apply !text-heading3 md:!text-heading2 !leading-[120%];
 }
 
+h3 {
+	@apply !text-heading4 md:!text-headingLg;
+}
+
 h4 {
 	@apply md:!text-heading3 text-heading4;
 }

@@ -6,17 +6,42 @@ import { TextWithCheckMark } from '../TextWithCheckMark'
 
 const SimplifiedJS = () => {
 	return (
-		<Section className="text-brand-text-dark !py-[6.25rem] bg-blue-gradient">
+		<Section className="text-brand-text-dark bg-blue-gradient">
 			<Container>
-				<Flex direction="column" gap="5" mb="9">
-					<Heading className="!text-heading2" size="9" align="center">
+				<Flex
+					direction="column"
+					gap={{
+						initial: '4',
+						md: '5',
+					}}
+					mb={{
+						initial: '6',
+						md: '9',
+					}}
+				>
+					<Heading
+						align={{
+							initial: 'left',
+							md: 'center',
+						}}
+					>
 						With{' '}
 						<Text className="text-brand-blue">&#123; JavsScript &#125;</Text>{' '}
 						Simplified, Your Learning Curve Becomes Structured, Practical &
 						Gradual
 					</Heading>
 
-					<Text align="center" size="5" as="p">
+					<Text
+						align={{
+							initial: 'left',
+							md: 'center',
+						}}
+						size={{
+							initial: '3',
+							md: '5',
+						}}
+						as="p"
+					>
 						Sure, tutorials give you a glimpse into JavaScript and may offer a
 						theoretical
 						<br /> foundation, but my course builds skills THAT YOU CAN ACTUALLY
@@ -24,7 +49,7 @@ const SimplifiedJS = () => {
 					</Text>
 				</Flex>
 
-				<Flex direction="column" className="gap-16">
+				<Flex direction="column" className="md:gap-16 gap-8">
 					<Flex align="center" gap="9">
 						<div className="min-w-[50%] hidden md:block">
 							<div className="aspect-square w-full h-full flex items-center">
@@ -36,13 +61,18 @@ const SimplifiedJS = () => {
 								/>
 							</div>
 						</div>
-						<Flex direction="column" className="!gap-[26px]">
-							<Heading as="h4" size="8" className="capitalize">
+						<Flex direction="column" className="!gap-4 md:!gap-[26px]">
+							<Heading as="h3" className="capitalize">
 								Build with JavaScript Like a Pro with Easy, Step-by-Step
 								Training
 							</Heading>
 
-							<Text size="5">
+							<Text
+								size={{
+									initial: '3',
+									md: '5',
+								}}
+							>
 								Learning JavaScript is a lot like learning to speak a new
 								language. It doesn&apos;t matter how many words you know, if you
 								never learn to combine them into sentences and paragraphs you
@@ -80,11 +110,16 @@ const SimplifiedJS = () => {
 
 					<Flex align="center" gap="9">
 						<Flex direction="column" gap="4">
-							<Heading as="h4" size="8" className="capitalize">
+							<Heading as="h3" className="capitalize">
 								Join a Supportive Discord Community of 14,000 Developers
 							</Heading>
 
-							<Text size="5">
+							<Text
+								size={{
+									initial: '3',
+									md: '5',
+								}}
+							>
 								Learning to code can sometimes feel like a solo journey, but it
 								doesn&apos;t have to be. When you start my course, you also gain
 								access to a Discord community where you can meet like-minded
@@ -139,11 +174,16 @@ const SimplifiedJS = () => {
 							</div>
 						</div>
 						<Flex direction="column" className="!gap-[26px]">
-							<Heading as="h4" size="8" className="capitalize">
+							<Heading as="h3" className="capitalize">
 								Expert Insights for Landing A Job
 							</Heading>
 
-							<Text size="5">
+							<Text
+								size={{
+									initial: '3',
+									md: '5',
+								}}
+							>
 								Securing your first dev job is challenging, especially for
 								self-taught individuals. My course brings you exclusive
 								interviews with seasoned developers like{' '}

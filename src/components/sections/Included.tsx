@@ -87,8 +87,13 @@ const Included = () => {
 	return (
 		<Section className="bg-brand-bg-dark text-brand-white">
 			<Container>
-				<Box mb="9">
-					<Heading align="center" size="9" className="!text-heading2" mb="6">
+				<Box
+					mb={{
+						initial: '6',
+						md: '9',
+					}}
+				>
+					<Heading align="center" mb="6">
 						What&apos;s{' '}
 						<span className="text-brand-blue-dark">
 							&#123; Included? &#125;
@@ -132,9 +137,15 @@ const Included = () => {
 
 const TabItem = ({ t }: { t: (typeof tabsData)[number] }) => {
 	return (
-		<Box className="bg-brand-white p-10 rounded-7">
-			<Flex direction="column" className="!gap-9">
-				<Text className="text-brand-blue" size="5" weight="bold">
+		<Box className="bg-brand-white md:p-10 p-5 rounded-7">
+			<Flex
+				direction="column"
+				gap={{
+					initial: '4',
+					md: '9',
+				}}
+			>
+				<Text className="text-brand-blue" size="6" weight="bold">
 					{t.heading}
 				</Text>
 
