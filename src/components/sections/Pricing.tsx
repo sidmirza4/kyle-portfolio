@@ -97,7 +97,10 @@ const packages = [
 
 const Pricing = () => {
 	return (
-		<Section className="py-[6.25rem] text-brand-text-dark bg-blue-gradient-reverse">
+		<Section
+			className="py-[6.25rem] text-brand-text-dark bg-blue-gradient-reverse"
+			id="packages"
+		>
 			<Container>
 				<Heading className="!mb-14 md:!mb-20" align="center">
 					Everything You Need To Build At Any Level

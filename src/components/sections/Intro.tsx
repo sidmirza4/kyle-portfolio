@@ -18,7 +18,10 @@ import FiveStars from '../UI/FiveStars'
 
 const Intro = () => {
 	return (
-		<section className="text-brand-text-dark bg-none md:bg-[url('/kyle.png')] bg-no-repeat bg-right bg-contain">
+		<section
+			className="text-brand-text-dark bg-none md:bg-[url('/kyle.png')] bg-no-repeat bg-right bg-contain"
+			id="about"
+		>
 			<Container>
 				<div className="">
 					<Flex direction="column" gap="6" className="lg:w-[50%]">

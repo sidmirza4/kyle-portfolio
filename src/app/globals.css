@@ -17,6 +17,10 @@
 	}
 }
 
+html {
+	@apply scroll-smooth;
+}
+
 section {
 	@apply md:!py-[6.25rem] !py-8;
 }

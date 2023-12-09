@@ -85,7 +85,7 @@ const tabsData = [
 
 const Included = () => {
 	return (
-		<Section className="bg-brand-bg-dark text-brand-white">
+		<Section className="bg-brand-bg-dark text-brand-white" id="included">
 			<Container>
 				<Box
 					mb={{

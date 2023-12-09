@@ -64,7 +64,10 @@ const benefits = [
 
 const Benefits = () => {
 	return (
-		<Section className="bg-blue-gradient-reverse text-brand-text-dark">
+		<Section
+			className="bg-blue-gradient-reverse text-brand-text-dark"
+			id="benefits"
+		>
 			<Container>
 				<Flex
 					direction="column"

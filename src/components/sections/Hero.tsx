@@ -17,6 +17,7 @@ import { TextWithCheckMark } from '../TextWithCheckMark'
 const Hero = () => {
 	return (
 		<Section
+			id="hero"
 			style={{
 				backgroundImage: 'url(/hero-bg.png)',
 				backgroundSize: 'cover',
@@ -84,7 +85,7 @@ const Hero = () => {
 								}
 								textClassName="uppercase"
 							>
-								start leaning now
+								start learning now
 							</Button>
 
 							<HeroTestimonial />
