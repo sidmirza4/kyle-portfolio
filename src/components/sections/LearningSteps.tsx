@@ -36,7 +36,7 @@ const LearningSteps = () => {
 					weight="bold"
 					align="center"
 				>
-					From Basic Concepts To In 3 Easy Steps{' '}
+					From Basic Concepts To{' '}
 					<Text className="text-brand-blue">
 						&#123; Complex Projects &#125;
 						<br />{' '}

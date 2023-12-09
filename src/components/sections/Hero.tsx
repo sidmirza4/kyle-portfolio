@@ -13,6 +13,8 @@ import Button from '../UI/Button'
 import TimDP from '../../../public/tim-dp.png'
 import { HappyCustomers } from '../HappyCustomers'
 import { TextWithCheckMark } from '../TextWithCheckMark'
+import Link from 'next/link'
+import { JS_SIMPLIFIED_COURSES_URL, TIM_YOUTUBE_URL } from '@/lib/constants'
 
 const Hero = () => {
 	return (
@@ -74,19 +76,21 @@ const Hero = () => {
 								</Flex>
 							</Box>
 
-							<Button
-								rightIcon={
-									<Image
-										src="/right-arrow.svg"
-										alt="arrow"
-										width={20}
-										height={20}
-									/>
-								}
-								textClassName="uppercase"
-							>
-								start learning now
-							</Button>
+							<Link href={JS_SIMPLIFIED_COURSES_URL} target="_blank">
+								<Button
+									rightIcon={
+										<Image
+											src="/right-arrow.svg"
+											alt="arrow"
+											width={20}
+											height={20}
+										/>
+									}
+									textClassName="uppercase"
+								>
+									start learning now
+								</Button>
+							</Link>
 
 							<HeroTestimonial />
 						</div>
@@ -119,7 +123,9 @@ const HeroTestimonial = () => {
 				}}
 				gap="5"
 			>
-				<Image src={TimDP} alt="tim" />
+				<Link href={TIM_YOUTUBE_URL} target="_blank">
+					<Image src={TimDP} alt="tim" />
+				</Link>
 				<div className="block md:hidden">
 					<Flex gap="3">
 						<Image src="/youtube.svg" alt="youtube" width={19} height={19} />

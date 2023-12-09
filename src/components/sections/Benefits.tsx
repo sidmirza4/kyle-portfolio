@@ -10,6 +10,8 @@ import {
 import Image from 'next/image'
 import React from 'react'
 import Button from '../UI/Button'
+import Link from 'next/link'
+import { JS_SIMPLIFIED_COURSES_URL } from '@/lib/constants'
 
 const benefits = [
 	{
@@ -109,19 +111,21 @@ const Benefits = () => {
 					</Grid>
 
 					<Flex justify="center">
-						<Button
-							rightIcon={
-								<Image
-									src="/right-arrow.svg"
-									alt="arrow"
-									width={20}
-									height={20}
-								/>
-							}
-							textClassName="uppercase !text-brand-white"
-						>
-							start leaning now
-						</Button>
+						<Link href={JS_SIMPLIFIED_COURSES_URL} target="_blank">
+							<Button
+								rightIcon={
+									<Image
+										src="/right-arrow.svg"
+										alt="arrow"
+										width={20}
+										height={20}
+									/>
+								}
+								textClassName="uppercase !text-brand-white"
+							>
+								start leaning now
+							</Button>
+						</Link>
 					</Flex>
 				</Flex>
 			</Container>

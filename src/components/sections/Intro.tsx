@@ -15,13 +15,15 @@ import { HappyCustomers } from '../HappyCustomers'
 import Button from '../UI/Button'
 import Image from 'next/image'
 import FiveStars from '../UI/FiveStars'
+import Link from 'next/link'
+import {
+	JS_SIMPLIFIED_BASE_URL,
+	JS_SIMPLIFIED_COURSES_URL,
+} from '@/lib/constants'
 
 const Intro = () => {
 	return (
-		<section
-			className="text-brand-text-dark bg-none md:bg-[url('/kyle.png')] bg-no-repeat bg-right bg-contain"
-			id="about"
-		>
+		<section className="text-brand-text-dark layer" id="about">
 			<Container>
 				<div className="">
 					<Flex direction="column" gap="6" className="lg:w-[50%]">
@@ -58,33 +60,42 @@ const Intro = () => {
 							realized that something was off.. The tutorials I followed lacked
 							the essential concepts I needed to truly grasp JavaScript. My
 							practice methods were even worse, causing 99% frustration and 1%
-							progress..... Read more
+							progress.....{' '}
+							<Link
+								href={JS_SIMPLIFIED_BASE_URL}
+								target="_blank"
+								className="underline"
+							>
+								Read more
+							</Link>
 						</Text>
 
-						<Button
-							textClassName="uppercase text-brand-white"
-							rightIcon={<Image src={RightArrow} alt="arrow" />}
-						>
-							Start learning now
-						</Button>
+						<Link href={JS_SIMPLIFIED_COURSES_URL} target="_blank">
+							<Button
+								textClassName="uppercase text-brand-white"
+								rightIcon={<Image src={RightArrow} alt="arrow" />}
+							>
+								Start learning now
+							</Button>
+						</Link>
 					</Flex>
 				</div>
 				{/* <div className="basis-[830px] shrink-0 relative">
 					<Image src={KyleProfileImage} alt="Kyle" />
 					<TestimonialBox
-						profile="/test-dp.png"
-						className="bg-[#EEF9FF] absolute top-[433px] right-[127px]"
+					profile="/test-dp.png"
+					className="bg-[#EEF9FF] absolute top-[433px] right-[127px]"
 					>
-						“When I watch tutorials it all makes sense, but when I try to do it
-						on my own I get stuck.”
+					“When I watch tutorials it all makes sense, but when I try to do it
+					on my own I get stuck.”
 					</TestimonialBox>
-
+					
 					<TestimonialBox
-						profile="/kyle-dp.png"
-						className="bg-[#FFF] absolute top-[540px] bottom-[88px]"
+					profile="/kyle-dp.png"
+					className="bg-[#FFF] absolute top-[540px] bottom-[88px]"
 					>
-						“When I watch tutorials it all makes sense, but when I try to do it
-						on my own I get stuck.”
+					“When I watch tutorials it all makes sense, but when I try to do it
+					on my own I get stuck.”
 					</TestimonialBox>
 				</div> */}
 			</Container>
