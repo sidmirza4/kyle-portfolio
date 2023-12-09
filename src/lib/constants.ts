@@ -11,3 +11,4 @@ export const MULTIPLE_PROJECTS =
 export const INTERVIEW_LIST =
 	'https://javascriptsimplified.com/interview-table-of-contents'
 export const QUOKKA_JS = 'https://quokkajs.com/'
+export const JS_SIMPLIFIED_PRICING = 'https://javascriptsimplified.com/#pricing'

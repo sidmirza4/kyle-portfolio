@@ -11,6 +11,8 @@ import {
 } from '@radix-ui/themes'
 import Button from '../UI/Button'
 import { cn } from '@/lib/utils'
+import Link from 'next/link'
+import { JS_SIMPLIFIED_PRICING } from '@/lib/constants'
 
 const packages = [
 	{
@@ -165,9 +167,11 @@ const PricingCard = ({ p }: { p: (typeof packages)[number] }) => {
 					</Flex>
 				</Box>
 
-				<Button fullWidth {...p.CTAProps}>
-					buy now
-				</Button>
+				<Link href={JS_SIMPLIFIED_PRICING} target="_blank">
+					<Button fullWidth {...p.CTAProps}>
+						buy now
+					</Button>
+				</Link>
 			</Flex>
 
 			{/* BADGE */}

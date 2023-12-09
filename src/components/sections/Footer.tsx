@@ -12,10 +12,12 @@ import Image from 'next/image'
 import React from 'react'
 import { TextWithCheckMark } from '../TextWithCheckMark'
 import Button from '../UI/Button'
+import Link from 'next/link'
+import { JS_SIMPLIFIED_COURSES_URL } from '@/lib/constants'
 
 const Footer = () => {
 	return (
-		<Section className="text-brand-text-dark">
+		<Section className="text-brand-text-dark bg-blue-gradient-reverse">
 			<Container>
 				<Flex align="center" gap="7">
 					<Flex direction="column" gap="6">
@@ -54,19 +56,21 @@ const Footer = () => {
 							</TextWithCheckMark>
 						</Flex>
 
-						<Button
-							rightIcon={
-								<Image
-									src="/right-arrow.svg"
-									alt="arrow"
-									width={20}
-									height={20}
-								/>
-							}
-							textClassName="uppercase text-brand-white"
-						>
-							start leaning now
-						</Button>
+						<Link href={JS_SIMPLIFIED_COURSES_URL} target="_blank">
+							<Button
+								rightIcon={
+									<Image
+										src="/right-arrow.svg"
+										alt="arrow"
+										width={20}
+										height={20}
+									/>
+								}
+								textClassName="uppercase text-brand-white"
+							>
+								start learning now
+							</Button>
+						</Link>
 					</Flex>
 
 					<Box width="100%" className="hidden md:block">

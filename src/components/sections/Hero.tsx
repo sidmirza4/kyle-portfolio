@@ -96,7 +96,7 @@ const Hero = () => {
 						</div>
 					</Box>
 
-					<Box width="100%" className="hidden lg:block">
+					<Box className="hidden lg:block min-w-[45%]">
 						<AspectRatio ratio={690 / 700}>
 							<Image
 								src="/hero-image.png"
