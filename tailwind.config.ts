@@ -42,7 +42,7 @@ module.exports = {
 			},
 
 			boxShadow: {
-				'testimonial-card': '0px 21px 33px 0px rgba(16, 25, 31, 0.04)',
+				'testimonial-card': '0px 21px 40px 0px rgba(16, 25, 31, 0.04)',
 				'blue-shadow': '0px 11px 64px 0px rgba(4, 169, 255, 0.28)',
 			},
 

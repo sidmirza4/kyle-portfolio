@@ -10,19 +10,16 @@ import { cn } from '@/lib/utils'
 
 const testimonials = [
 	{
-		profile: '/andrew.png',
 		message:
 			"Cool, like that. I've used JS self taught for a while - for a long time I defaulted to Query, but I've recently started going back to basics and it's amazing the things that you miss when you're self taught. This is filling in a lot of gaps!",
 		name: 'Andrew Sharpe',
 	},
 	{
-		profile: '/fer.png',
 		message:
 			'Thank you! This course was the perfect refresher a few months after learning react in bootcamp. :)',
 		name: 'Fer Wicker',
 	},
 	{
-		profile: '/bart.png',
 		message:
 			"Thanks for this course Kyle! It gave me the confidence to tackle a junior HTML/CSS project at Frontend Mentor (you can view my solution here: <a target='_blank' class='text-brand-blue font-semibold' href='https://typemaster-landing-page-ten.vercel.app/'>https://typemaster-landing-page-ten.vercel.app/</a>) The code is still bulky, had to rewatch some videos multiple times and I had to google some stuff i didn't yet know, but hey, that's life of a developer I guess ;) Next stop: Javascript simplified :) kind regards,",
 		name: 'Bart Erkamp',
@@ -108,14 +105,14 @@ const Testimonial = () => {
 						<HappyCustomers transparent />
 					</Flex>
 					<div className="relative">
-						<div className="overflow-hidden pl-px">
+						<div className="pl-px overflow-x-hidden">
 							<CarouselPrevItemButton
 								onClick={slideToPrevItem}
-								className="md:block hidden -translate-x-1/2 top-1/2"
+								className="-translate-x-1/2 top-1/2"
 							/>
 							<div>
 								{carouselFragment}
-								<Flex className="!gap-5" align="center" justify="center">
+								{/* <Flex className="!gap-5" align="center" justify="center">
 									<CarouselPrevItemButton
 										onClick={slideToPrevItem}
 										className="block md:hidden relative"
@@ -124,11 +121,11 @@ const Testimonial = () => {
 										onClick={slideToNextItem}
 										className="block md:hidden relative"
 									/>
-								</Flex>
+								</Flex> */}
 							</div>
 							<CarouselNextItemButton
 								onClick={slideToNextItem}
-								className="md:block hidden translate-x-1/2 right-0 top-1/2"
+								className="translate-x-1/2 right-0 top-1/2"
 							/>
 						</div>
 					</div>
@@ -162,15 +159,15 @@ const TestimonialItem = ({
 }) => {
 	return (
 		<div className="pt-[44px]">
-			<div className="relative border-[#C3D5E5] border bg-brand-white !rounded-[20px] py-[70px] pb-10 px-6">
-				<div className="absolute -top-[44px] left-1/2 -translate-x-1/2">
+			<div className="relative border-[#C3D5E5] border bg-brand-white !rounded-[20px] py-9 px-6 shadow-testimonial-card">
+				{/* <div className="absolute -top-[44px] left-1/2 -translate-x-1/2">
 					<Image
 						src={testimonial.profile}
 						alt="profile"
 						width={88}
 						height={88}
 					/>
-				</div>
+				</div> */}
 				<Flex align="center" direction="column" className="!gap-[20px]">
 					{/* <FiveStars size={16} /> */}
 					<Text
@@ -179,7 +176,7 @@ const TestimonialItem = ({
 							__html: `&ldquo;${testimonial.message}&rdquo;`,
 						}}
 					/>
-					<Heading as="h6" size="3" className="capitalize">
+					<Heading className="capitalize" size="4" as="h5">
 						{testimonial.name}
 					</Heading>
 					{/* <Flex className="gap-[6px]">
