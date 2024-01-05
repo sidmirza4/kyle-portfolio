@@ -14,7 +14,7 @@ import TimDP from '../../../public/tim-dp.png'
 import { HappyCustomers } from '../HappyCustomers'
 import { TextWithCheckMark } from '../TextWithCheckMark'
 import Link from 'next/link'
-import { JS_SIMPLIFIED_COURSES_URL, TIM_YOUTUBE_URL } from '@/lib/constants'
+import { JS_SIMPLIFIED_LOGIN } from '@/lib/constants'
 
 const Hero = () => {
 	return (
@@ -25,78 +25,109 @@ const Hero = () => {
 				backgroundSize: 'cover',
 			}}
 		>
+			{' '}
+			<Box mb="5" className={`flex justify-center`}>
+				<HappyCustomers />
+			</Box>
 			<Container>
 				<Flex gap="8" align="center">
 					<Box>
-						<Box mb="5">
-							<HappyCustomers />
-						</Box>
-						<div className="flex flex-col gap-9 text-brand-white">
-							<Heading className="text-brand-white capitalize" size="9">
-								Gain the confidence to build
-								<br /> any{' '}
-								<span className="text-brand-blue">
-									&#123; JavaScript &#125;
-								</span>{' '}
-								project and
-								<br /> land your dream job
+						<div className="flex flex-col flex-wrap content-center gap-9 font-mono">
+							<Heading
+								className="text-left font-bold capitalize text-brand-white md:text-center"
+								size="9"
+							>
+								Build Any{' '}
+								<span className="text-brand-blue">&#123;JavaScript&#125;</span>{' '}
+								project
+								<br /> and land your dream Tech job
 							</Heading>
 
-							<Box className="w-4/5">
-								<Text
-									className="font-semibold"
-									size={{
-										initial: '3',
-										md: '5',
-									}}
-								>
-									JavaScript Simplified is a multi-step system for my community
-									of 14,000+ developers to build their dream projects and land
-									their dream jobs.
-								</Text>
+							<div className="flex-col md:flex">
+								<div className="md:order-2">
+									<div className=" my-10 flex w-full items-center justify-center">
+										<div className="relative ">
+											<Image
+												src="/5H2_bBtmDBE-HD 2.svg"
+												alt="24 Hours left Image"
+												width={572}
+												height={321.75}
+												className="h-[176.253px] w-[313.339px] md:h-[321.75px] md:w-[572px]"
+											/>
 
-								<Flex direction="column" gap="4" mt="7">
-									<TextWithCheckMark>
-										Get instant results with
-										<Text className="font-bolder"> easy-to-implement </Text>
-										training and projects
-									</TextWithCheckMark>
+											<Link href={JS_SIMPLIFIED_LOGIN} target="_blank">
+												<Image
+													src="/Group 1484579320.svg"
+													alt="Play button"
+													width={69}
+													height={69}
+													className="absolute bottom-[69.89px] left-[136.95px] h-[37.798px] w-[37.798px] md:bottom-[125.75px] md:left-[250px] md:h-[69px] md:w-[69px] "
+												/>
+											</Link>
+										</div>
+									</div>
+								</div>
 
-									<TextWithCheckMark>
-										Cut the guesswork in our community of
-										<Text className="font-bolder"> 14,000 developers</Text>
-									</TextWithCheckMark>
-
-									<TextWithCheckMark>
-										Save time and money with{' '}
-										<Text className="font-bolder">
-											proven workflows and expert guidance
+								<div className="md:order-1">
+									<Box className="w-5/5 text-justify md:text-center">
+										<Text
+											className="font-semibold"
+											size={{
+												initial: '3',
+												md: '4',
+											}}
+										>
+											JavaScript Simplified is a multi-step system for my
+											community of 14,000+
+											<br /> developers to build their dream projects and land
+											their dream jobs.
 										</Text>
-									</TextWithCheckMark>
-								</Flex>
-							</Box>
 
-							<Link href={JS_SIMPLIFIED_COURSES_URL} target="_blank">
-								<Button
-									rightIcon={
-										<Image
-											src="/right-arrow.svg"
-											alt="arrow"
-											width={20}
-											height={20}
-										/>
-									}
-									textClassName="uppercase"
-								>
-									start learning now
-								</Button>
-							</Link>
+										<Flex
+											gap="4"
+											mt="7"
+											justify-content="space-around"
+											className="flex-col text-left md:flex-row"
+										>
+											<TextWithCheckMark>
+												Get instant results with
+												<Text className="font-bolder"> easy-to-implement </Text>
+												training and projects
+											</TextWithCheckMark>
 
-							<HeroTestimonial />
+											<TextWithCheckMark>
+												Cut the guesswork in my community of
+												<Text className="font-bolder"> 14,000 developers</Text>
+											</TextWithCheckMark>
+
+											<TextWithCheckMark>
+												Save time and money with{' '}
+												<Text className="font-bolder">
+													proven workflows and expert guidance
+												</Text>
+											</TextWithCheckMark>
+										</Flex>
+									</Box>
+								</div>
+							</div>
+
+							<div className="flex justify-center">
+								<Link href="path-to-play-video" target="_blank">
+									<Image
+										src="/Button.svg"
+										alt="login"
+										height={45}
+										width={296}
+										className="ml-4 md:ml-0 "
+									/>
+								</Link>
+							</div>
+
+							{/* <HeroTestimonial /> */}
 						</div>
 					</Box>
 
-					<Box className="hidden lg:block min-w-[45%]">
+					{/* <Box className="hidden lg:block min-w-[45%]">
 						<AspectRatio ratio={690 / 700}>
 							<Image
 								src="/hero-image.png"
@@ -105,62 +136,38 @@ const Hero = () => {
 								alt="hero"
 							/>
 						</AspectRatio>
-					</Box>
+					</Box> */}
 				</Flex>
 			</Container>
 		</Section>
 	)
 }
 
-const HeroTestimonial = () => {
-	return (
-		<Flex gap="4" className="flex-col md:flex-row">
-			<Flex
-				className="shrink-0"
-				align={{
-					initial: 'center',
-					md: 'start',
-				}}
-				gap="5"
-			>
-				<Link href={TIM_YOUTUBE_URL} target="_blank">
-					<Image src={TimDP} alt="tim" />
-				</Link>
-				<div className="block md:hidden">
-					<Flex gap="3">
-						<Image src="/youtube.svg" alt="youtube" width={19} height={19} />
-						<Text size="1">
-							<Text weight="bold">1.3M+</Text> Subscribers
-						</Text>
-					</Flex>
-				</div>
-			</Flex>
-
-			<Box>
-				{/* <Flex justify="between" className="mb-[6px]"> */}
-				{/* <FiveStars /> */}
-				<div className="hidden md:block">
-					<Flex gap="3">
-						<Image src="/youtube.svg" alt="youtube" width={19} height={19} />
-						<Text size="1">
-							<Text weight="bold">1.3M+</Text> Subscribers
-						</Text>
-					</Flex>
-				</div>
-				{/* </Flex> */}
-				<Text size="1">
-					&#34;Kyle is a phenomenal instructor with an unmatched ability to
-					break down complex topics and make even the most challenging problems
-					digestible. Not only does he teach you the theory but he tests you
-					every step of the way with practical projects and exercises that are
-					fun and challenging. Seeing how Kyle designs his courses blew me away,
-					the amount of effort and thought into the students experience is next
-					to none.&#34;
-				</Text>
-				<p className="text-[9px] mt-[6px]">Tim Ruscica, YouTuber</p>
-			</Box>
-		</Flex>
-	)
-}
+// const HeroTestimonial = () => {
+// 	return (
+// 		<Flex gap="4" className="flex-col md:flex-row">
+// 			<Flex
+// 				className="shrink-0"
+// 				align={{
+// 					initial: 'center',
+// 					md: 'start',
+// 				}}
+// 				gap="5"
+// 			>
+// 				<Link href={TIM_YOUTUBE_URL} target="_blank">
+// 					<Image src={TimDP} alt="tim" />
+// 				</Link>
+// 				<div className="block md:hidden">
+// 					<Flex gap="3">
+// 						<Image src="/youtube.svg" alt="youtube" width={19} height={19} />
+// 						<Text size="1">
+// 							<Text weight="bold">1.3M+</Text> Subscribers
+// 						</Text>
+// 					</Flex>
+// 				</div>
+// 			</Flex>
+// 		</Flex>
+// 	)
+// }
 
 export default Hero
