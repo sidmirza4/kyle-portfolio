@@ -5,7 +5,12 @@ import React from 'react'
 export const TextWithCheckMark = ({ children }) => {
 	return (
 		<Flex gap="4">
-			<Image src="/tick.svg" alt="check" width={20} height={20} />
+			<Image
+				src="/checkmark-circle-outline 1.svg"
+				alt="check"
+				width={32}
+				height={32}
+			/>
 			<Text
 				as="p"
 				size={{

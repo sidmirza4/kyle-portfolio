@@ -22,7 +22,7 @@ html {
 }
 
 section {
-	@apply md:!py-[6.25rem] !py-8;
+	@apply md:!pb-[2.75rem] !pb-[3.5rem] !pt-[2rem] md:!pt-[5rem];
 }
 
 section,
