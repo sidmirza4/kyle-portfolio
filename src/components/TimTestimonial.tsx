@@ -1,24 +1,64 @@
 import React from 'react'
 import Image from 'next/image'
-import { Text } from '@radix-ui/themes'
+import { AspectRatio, Strong, Text } from '@radix-ui/themes'
+import TimLogo from '../../public/tim-logo.png'
 
 import FiveStars from './UI/FiveStars'
+import Link from 'next/link'
+import { TIM_YOUTUBE_URL } from '@/lib/constants'
 
 const TimTestimonial = () => {
 	return (
-		<div className="flex gap-9 p-[18px] items-center bg-brand-gray-blue border border-gray-1">
-			<Image src="/tim-photo.png" alt="tim" width={240} height={240} />
-			<div>
-				<FiveStars />
-				<Text>
-					&ldquo;Kyle is a phenomenal instructor with an unmatched ability to
-					break down complex projects and make even the most challenging
-					problems digestible. Not only does he teach you the theory but he
-					tests you every step of the way with practical projects and exercises
-					that are fun and challenging. Seeing how Kyle designs his courses blew
-					me away, the amount of effort and thought into the student&apos;s
-					experience is next to none.&rdquo;
-				</Text>
+		<div className="pb-[105px]">
+			<div className="flex relative flex-col sm:flex-row gap-9 p-[18px] items-center bg-brand-gray-blue border border-[#141D25]/10 rounded-3 md:w-[932px]">
+				<Image
+					src="/tim-photo.png"
+					alt="tim"
+					width={240}
+					height={240}
+					className="rounded-3"
+				/>
+				<div>
+					<FiveStars />
+					<Text className="!mt-2 !mb-6" as="p" size="2">
+						&ldquo;Kyle is a phenomenal instructor with an&nbsp;
+						<Strong>
+							unmatched ability to break down complex projects
+						</Strong>{' '}
+						and make even the most challenging problems digestible. Not only
+						does he teach you the theory but he tests you every step of the way
+						with
+						<Strong>practical projects</Strong> and exercises that are fun and
+						challenging. Seeing how Kyle designs his courses blew me away, the
+						amount of&nbsp;
+						<Strong>
+							effort and thought into the student&apos;s experience
+						</Strong>
+						&nbsp;is next to none.&rdquo;
+					</Text>
+
+					<div className="flex flex-col xs:flex-row gap-3 xs:gap-[18px] items-start xs:items-center">
+						<div className="flex !gap-3 items-center">
+							<Image src={TimLogo} width={26} height={26} alt="Tim Logo" />
+							<Link href={TIM_YOUTUBE_URL}>
+								<Text
+									className="font-semibold underline underline-offset-4"
+									size="1"
+								>
+									Tim Ruscica, YouTuber
+								</Text>
+							</Link>
+						</div>
+
+						<Text>
+							<Strong>1.4M+</Strong>&nbsp;Subscribers
+						</Text>
+					</div>
+				</div>
+
+				{/* <div className="absolute top-2 -z-10 left-1/2 -translate-x-1/2 aspect-auto">
+					<BackgroundBlob />
+				</div> */}
 			</div>
 		</div>
 	)
@@ -28,7 +68,7 @@ const BackgroundBlob = () => {
 	return (
 		<svg
 			width="1203"
-			height="634"
+			height="50vw"
 			viewBox="0 0 1203 634"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"

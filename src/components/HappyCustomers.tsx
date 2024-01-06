@@ -15,7 +15,6 @@ export const HappyCustomers = ({
 				transparent ? 'bg-transparent' : 'bg-brand-bg-light'
 			} w-max px-[14px] py-[11px] rounded-[7px] gap-[7px]`}
 		>
-			{/* <Image src="/clubbedDPs.png" alt="DP" width={dpWidth || 86} height={22} /> */}
 			<CustomerImages />
 			<Text
 				className={`${transparent ? 'text-brand-text-dark' : 'text-brand-white'}
