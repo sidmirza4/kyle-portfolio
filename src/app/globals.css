@@ -26,10 +26,6 @@ html {
 	font-family: var(--font-lig-consolata) !important;
 } */
 
-section {
-	@apply md:!py-[6.25rem] !py-8;
-}
-
 section,
 nav {
 	@apply px-5 xl:px-0;
