@@ -1,12 +1,4 @@
-import {
-	AspectRatio,
-	Box,
-	Container,
-	Flex,
-	Heading,
-	Section,
-	Text,
-} from '@radix-ui/themes'
+import { Box, Container, Flex, Heading, Section, Text } from '@radix-ui/themes'
 import Image from 'next/image'
 import React from 'react'
 import Button from '../UI/Button'
@@ -15,6 +7,8 @@ import { HappyCustomers } from '../HappyCustomers'
 import { TextWithCheckMark } from '../TextWithCheckMark'
 import Link from 'next/link'
 import { JS_SIMPLIFIED_COURSES_URL, TIM_YOUTUBE_URL } from '@/lib/constants'
+import TextWithCurlyBraces from '../UI/TextWithCurlyBraces'
+import FireIcon from '../../../public/fire.svg'
 
 const Hero = () => {
 	return (
@@ -24,89 +18,99 @@ const Hero = () => {
 				backgroundImage: 'url(/hero-bg.png)',
 				backgroundSize: 'cover',
 			}}
+			className="!pt-[90px] !pb-[45px] text-brand-white"
 		>
 			<Container>
-				<Flex gap="8" align="center">
-					<Box>
-						<Box mb="5">
-							<HappyCustomers />
-						</Box>
-						<div className="flex flex-col gap-9 text-brand-white">
-							<Heading className="text-brand-white capitalize" size="9">
-								Gain the confidence to build
-								<br /> any{' '}
-								<span className="text-brand-blue">
-									&#123; JavaScript &#125;
-								</span>{' '}
-								project and
-								<br /> land your dream job
-							</Heading>
+				{/* <Flex gap="8" align="center"> */}
+				<Box>
+					<Flex mb="7" justify="center">
+						<HappyCustomers />
+					</Flex>
 
-							<Box className="w-4/5">
-								<Text
-									className="font-semibold"
-									size={{
-										initial: '3',
-										md: '5',
-									}}
-								>
-									JavaScript Simplified is a multi-step system for my community
-									of 14,000+ developers to build their dream projects and land
-									their dream jobs.
-								</Text>
+					<Flex justify="center" className="!mb-[50px]">
+						<Heading
+							align="center"
+							className="capitalize w-full sm:w-[750px]"
+							size="9"
+						>
+							Build any<TextWithCurlyBraces>JavaScript</TextWithCurlyBraces>
+							project and land your dream tech job
+						</Heading>
+					</Flex>
 
-								<Flex direction="column" gap="4" mt="7">
-									<TextWithCheckMark>
-										Get instant results with
-										<Text className="font-bolder"> easy-to-implement </Text>
-										training and projects
-									</TextWithCheckMark>
+					<Flex justify="center">
+						<Text
+							className="font-semibold w-full sm:w-[700px] !mb-[50px]"
+							size={{
+								initial: '3',
+								md: '5',
+							}}
+							as="p"
+							align="center"
+						>
+							JavaScript Simplified is a multi-step system for my community of
+							14,000+ developers to build their dream projects and land their
+							dream jobs.
+						</Text>
+					</Flex>
 
-									<TextWithCheckMark>
-										Cut the guesswork in our community of
-										<Text className="font-bolder"> 14,000 developers</Text>
-									</TextWithCheckMark>
+					<Flex
+						gap="4"
+						direction={{
+							initial: 'column',
+							sm: 'row',
+						}}
+						className="!mb-[60px]"
+					>
+						<TextWithCheckMark checkType="circle">
+							Get instant results with
+							<Text className="font-bolder"> easy-to-implement </Text>
+							training and projects
+						</TextWithCheckMark>
 
-									<TextWithCheckMark>
-										Save time and money with{' '}
-										<Text className="font-bolder">
-											proven workflows and expert guidance
-										</Text>
-									</TextWithCheckMark>
-								</Flex>
-							</Box>
+						<TextWithCheckMark checkType="circle">
+							Cut the guesswork in our community of
+							<Text className="font-bolder"> 14,000 developers</Text>
+						</TextWithCheckMark>
 
-							<Link href={JS_SIMPLIFIED_COURSES_URL} target="_blank">
-								<Button
-									rightIcon={
-										<Image
-											src="/right-arrow.svg"
-											alt="arrow"
-											width={20}
-											height={20}
-										/>
-									}
-									textClassName="uppercase"
-								>
-									start learning now
-								</Button>
-							</Link>
+						<TextWithCheckMark checkType="circle">
+							Save time and money with{' '}
+							<Text className="font-bolder">
+								proven workflows and expert guidance
+							</Text>
+						</TextWithCheckMark>
+					</Flex>
 
-							<HeroTestimonial />
-						</div>
-					</Box>
+					<Flex justify="center" className="!mb-10">
+						<Image
+							src="/hero-video-poster.svg"
+							height={322}
+							width={572}
+							alt="hero video"
+						/>
+					</Flex>
 
-					<Box className="hidden lg:block min-w-[45%]">
-						<AspectRatio ratio={690 / 700}>
-							<Image
-								src="/hero-image.png"
-								height={700}
-								width={690}
-								alt="hero"
-							/>
-						</AspectRatio>
-					</Box>
-				</Flex>
+					<Flex justify="center">
+						<Link href={JS_SIMPLIFIED_COURSES_URL} target="_blank">
+							<Button
+								size="lg"
+								rightIcon={<Image src={FireIcon} alt="fire" />}
+								textClassName="uppercase"
+							>
+								get instant access now
+							</Button>
+						</Link>
+					</Flex>
+
+					{/* <HeroTestimonial /> */}
+				</Box>
+
+				{/* <Box className="hidden lg:block min-w-[45%]">
+					<AspectRatio ratio={690 / 700}>
+						<Image src="/hero-image.png" height={700} width={690} alt="hero" />
+					</AspectRatio>
+				</Box> */}
+				{/* </Flex> */}
 			</Container>
 		</Section>
 	)
