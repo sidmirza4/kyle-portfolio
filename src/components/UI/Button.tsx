@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils'
 import { Box, Flex, Text } from '@radix-ui/themes'
 import React, { ButtonHTMLAttributes } from 'react'
 
@@ -7,6 +8,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	rightIcon?: React.ReactNode
 	textClassName?: string
 	fullWidth?: boolean
+	size?: 'sm' | 'md' | 'lg'
 }
 
 const Button = (props: ButtonProps) => {
@@ -16,29 +18,41 @@ const Button = (props: ButtonProps) => {
 		rightIcon = null,
 		textClassName,
 		fullWidth = false,
+		className,
+		size = 'lg',
 		...rest
 	} = props
 
 	return (
 		<button
-			className={`w-max rounded-5 md:py-4 md:px-12 py-3 px-9 ${
-				fullWidth && '!w-full'
-			} 
-				${
-					outline
-						? 'border-2 border-brand-orange bg-transparent'
-						: 'border-none bg-orange-gradient'
+			className={cn(
+				`w-max rounded-5`,
+				`${fullWidth && '!w-full'} 
+					${
+						outline
+							? 'border-2 border-brand-orange bg-transparent'
+							: 'border-none bg-orange-gradient'
+					}
+				${className}`,
+				{
+					'px-7 py-[14px]': size === 'md',
+					'px-5 py-2': size === 'sm',
+					'px-7 py-4': size === 'lg',
 				}
-			`}
+			)}
 			{...rest}
 		>
 			<Flex gap="3" align="center" justify="center">
 				<Text
-					className={`font-bolder ${textClassName}`}
-					size={{
-						initial: '3',
-						md: '5',
-					}}
+					className={cn(
+						`font-bolder`,
+						{
+							'text-3': size === 'md',
+							'text-2': size === 'sm',
+							'text-5': size === 'lg',
+						},
+						`${textClassName}`
+					)}
 				>
 					{children}
 				</Text>
