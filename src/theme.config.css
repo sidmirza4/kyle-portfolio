@@ -1,5 +1,6 @@
 .radix-themes {
-	--default-font-family: var(--font-open-sans);
+	--default-font-family: var(--font-lato);
+	--heading-font-family: var(--font-lig-consolata);
 	color: #fff;
 	--container-4: 1300px;
 	--heading-font-size-adjust: 0.93;

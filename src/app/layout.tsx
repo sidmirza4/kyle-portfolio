@@ -3,12 +3,31 @@ import './globals.css'
 import '@radix-ui/themes/styles.css'
 import '../theme.config.css'
 import { Theme, ThemePanel } from '@radix-ui/themes'
-import { Open_Sans } from 'next/font/google'
+import { Lato } from 'next/font/google'
 
-const openSans = Open_Sans({
+import localFont from 'next/font/local'
+import { cn } from '@/lib/utils'
+
+const ligConsolata = localFont({
+	src: [
+		{
+			path: '../static/fonts/Ligconsolata-Regular.woff',
+			weight: '400',
+			style: 'normal',
+		},
+		{
+			path: '../static/fonts/Ligconsolata-Bold.woff',
+			weight: '700',
+			style: 'normal',
+		},
+	],
+	variable: '--font-lig-consolata',
+})
+
+const lato = Lato({
 	subsets: ['latin'],
-	weight: ['400', '500', '600', '700', '800'],
-	variable: '--font-open-sans',
+	weight: ['100', '300', '400', '700', '900'],
+	variable: '--font-lato',
 })
 
 export const metadata = {
@@ -18,7 +37,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en" className={openSans.className}>
+		<html lang="en" className={cn(ligConsolata.variable, lato.variable)}>
 			<body className="text-brand-white">
 				<Theme>
 					{children}

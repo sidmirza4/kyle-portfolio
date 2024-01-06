@@ -19,7 +19,12 @@
 
 html {
 	@apply scroll-smooth;
+	/* font-family: var(--font-lato); */
 }
+
+/* h1, h2, h3, h4 {
+	font-family: var(--font-lig-consolata) !important;
+} */
 
 section {
 	@apply md:!py-[6.25rem] !py-8;
@@ -44,6 +49,10 @@ h4 {
 
 h6 {
 	@apply !text-heading6 md:!text-heading4 !leading-2;
+}
+
+.clubbed-customers:not(:first-child) {
+	@apply -ml-1.5;
 }
 
 .layer {
