@@ -38,6 +38,7 @@ module.exports = {
 				'brand-white': '#FFF',
 				'border-defaut': '#C3D5E5',
 				'default-gray': '#F7F7F7',
+				'brand-gray-blue': '#F6FCFF',
 				placeholder: 'rgba(13, 22, 27, 0.4)',
 			},
 
