@@ -11,6 +11,7 @@ import Link from 'next/link'
 import { JS_SIMPLIFIED_COURSES_URL } from '@/lib/constants'
 import TextWithCurlyBraces from '../UI/TextWithCurlyBraces'
 import FiveStars from '../UI/FiveStars'
+import CTA from '../UI/CTA'
 
 const testimonials = [
 	{
@@ -163,22 +164,8 @@ const Testimonial = () => {
 					</div>
 				</Flex>
 
-				<Flex justify="center">
-					<Link href={JS_SIMPLIFIED_COURSES_URL} target="_blank">
-						<Button
-							textClassName="uppercase text-brand-white"
-							rightIcon={
-								<Image
-									src="/right-arrow.svg"
-									alt="arrow"
-									width={20}
-									height={20}
-								/>
-							}
-						>
-							Start Learning Now
-						</Button>
-					</Link>
+				<Flex justify="center" className="text-brand-white">
+					<CTA />
 				</Flex>
 			</Container>
 		</Section>

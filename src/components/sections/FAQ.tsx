@@ -8,6 +8,7 @@ import {
 	AccordionItem,
 	AccordionTrigger,
 } from '../UI/accordion'
+import TextWithCurlyBraces from '../UI/TextWithCurlyBraces'
 
 const faqs = [
 	{
@@ -50,29 +51,20 @@ const faqs = [
 		answer:
 			'If you have any more questions about the course email me at <a class="hover:underline text-brand-blue-dark" href="mailto:kyle@webdevsimplified.com" target="_blank">kyle@webdevsimplified.com</a> and I will answer any questions you have.',
 	},
-	// {
-	// 	question: '',
-	// 	answer: '',
-	// },
-	// {
-	// 	question: '',
-	// 	answer: '',
-	// },
 ]
 
 const FAQ = () => {
 	return (
-		<Section className="text-brand-white bg-brand-bg-dark">
+		<Section className="text-brand-white bg-brand-bg-dark !pt-10 !pb-[30px] md:!py-[100px]">
 			<Container>
 				<Box
 					mb={{
-						initial: '4',
+						initial: '6',
 						md: '9',
 					}}
 				>
 					<Heading className="md:!mb-8 !mb-4" align="center">
-						Frequently Asked{' '}
-						<span className="text-brand-blue">&#123; Questions &#125;</span>
+						Answers to your <TextWithCurlyBraces>Questions</TextWithCurlyBraces>
 					</Heading>
 
 					<Text
@@ -94,7 +86,7 @@ const FAQ = () => {
 						{faqs.map((f) => (
 							<>
 								<AccordionItem value={f.question} key={f.question}>
-									<AccordionTrigger className="text-left !text-3">
+									<AccordionTrigger className="text-left !text-4">
 										{f.question}
 									</AccordionTrigger>
 									<AccordionContent>

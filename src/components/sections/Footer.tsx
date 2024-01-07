@@ -1,3 +1,5 @@
+'use client'
+
 import {
 	AspectRatio,
 	Box,
@@ -5,26 +7,25 @@ import {
 	Flex,
 	Heading,
 	Section,
+	Separator,
 	Strong,
 	Text,
 } from '@radix-ui/themes'
 import Image from 'next/image'
 import React from 'react'
 import { TextWithCheckMark } from '../TextWithCheckMark'
-import Button from '../UI/Button'
-import Link from 'next/link'
-import { JS_SIMPLIFIED_COURSES_URL } from '@/lib/constants'
+import TextWithCurlyBraces from '../UI/TextWithCurlyBraces'
+import CTA from '../UI/CTA'
 
 const Footer = () => {
 	return (
-		<Section className="text-brand-text-dark bg-blue-gradient-reverse">
+		<Section className="text-brand-text-dark bg-blue-gradient-reverse !pt-14 !pb-[60px] md:!pt-36 md:!px-10">
 			<Container>
 				<Flex align="center" gap="7">
-					<Flex direction="column" gap="6">
+					<Flex className="md:basis-1/2" direction="column" gap="6">
 						<Heading>
-							Looking for a{' '}
-							<Text className="text-brand-blue">&#123; JavaScript &#125;</Text>{' '}
-							course that&apos;s anything but average?
+							A Proven System For JavaScript Mastery With{' '}
+							<TextWithCurlyBraces>JavaScript</TextWithCurlyBraces> Simplified
 						</Heading>
 
 						<Text
@@ -38,6 +39,15 @@ const Footer = () => {
 							Learn gradually, at your own pace, and master each concept until
 							you&apos;re capable of crafting complex projects from scratch.
 						</Text>
+
+						<div className="block md:hidden">
+							<Image
+								src="/images/footer.png"
+								height={486}
+								width={624}
+								alt="footer"
+							/>
+						</div>
 
 						<Flex gap="5" direction="column">
 							<TextWithCheckMark>
@@ -56,34 +66,26 @@ const Footer = () => {
 							</TextWithCheckMark>
 						</Flex>
 
-						<Link href={JS_SIMPLIFIED_COURSES_URL} target="_blank">
-							<Button
-								rightIcon={
-									<Image
-										src="/right-arrow.svg"
-										alt="arrow"
-										width={20}
-										height={20}
-									/>
-								}
-								textClassName="uppercase text-brand-white"
-							>
-								start learning now
-							</Button>
-						</Link>
+						<div className="text-brand-white">
+							<CTA size="md" />
+						</div>
 					</Flex>
 
-					<Box width="100%" className="hidden md:block">
-						<AspectRatio ratio={624 / 486}>
-							<Image
-								src="/footer-poster.svg"
-								height={486}
-								width={624}
-								alt="footer"
-							/>
-						</AspectRatio>
-					</Box>
+					<div className="hidden md:block basis-1/2">
+						<Image
+							src="/images/footer.png"
+							height={486}
+							width={624}
+							alt="footer"
+						/>
+					</div>
 				</Flex>
+
+				<div className="flex flex-col gap-10 items-center !mt-[50px] md:!mt-[120px]">
+					<Separator className="w-full" size="4" />
+
+					<Image src="/logo.png" height={44} width={60} alt="logo" />
+				</div>
 			</Container>
 		</Section>
 	)
