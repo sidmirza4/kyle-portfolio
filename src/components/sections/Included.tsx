@@ -120,11 +120,11 @@ const Included = () => {
 				<Flex justify="center">
 					<Tabs
 						defaultValue={tabsData[0].value}
-						className="text-2 w-full"
+						className="text-2 flex flex-col md:flex-row w-full items-center justify-center"
 						orientation="vertical"
 					>
 						<TabsList
-							className="bg-brand-bg-light p-2 rounded-5 justify-between"
+							className="justify-between flex flex-row md:flex-col gap-2 px-0 py-5 h-fit m-5 w-full md:w-[22%]"
 							data--orientation="vertical"
 						>
 							{tabsData.map((t) => (
