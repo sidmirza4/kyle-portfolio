@@ -11,19 +11,21 @@ const TabsList = React.forwardRef<
 	React.ElementRef<typeof TabsPrimitive.List>,
 	React.ComponentPropsWithoutRef<typeof TabsPrimitive.List>
 >(({ className, ...props }, ref) => {
-	return <TabsPrimitive.List
-		ref={ref}
-		className={cn(
-			'flex items-center justify-center p-1 bg-muted text-muted-foreground',
-			'overflow-x-scroll no-scrollbar',
-			className
-		)}
-		{...props}
-	/>
+	return (
+		<TabsPrimitive.List
+			ref={ref}
+			className={cn(
+				'flex items-center justify-center p-1 bg-muted text-muted-foreground',
+				'overflow-x-scroll no-scrollbar',
+				className
+			)}
+			{...props}
+		/>
+	)
 })
 
 TabsList.displayName = TabsPrimitive.List.displayName
-	
+
 const TabsTrigger = React.forwardRef<
 	React.ElementRef<typeof TabsPrimitive.Trigger>,
 	React.ComponentPropsWithoutRef<typeof TabsPrimitive.Trigger>

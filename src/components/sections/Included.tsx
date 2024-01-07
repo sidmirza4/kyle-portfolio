@@ -11,6 +11,7 @@ import {
 	QUOKKA_JS,
 } from '@/lib/constants'
 import Link from 'next/link'
+import TextWithCurlyBraces from '../UI/TextWithCurlyBraces'
 
 const tabsData = [
 	{
@@ -97,22 +98,14 @@ const Included = () => {
 	return (
 		<Section className="bg-brand-bg-dark text-brand-white" id="included">
 			<Container>
-				<Box
-					mb={{
-						initial: '6',
-						md: '9',
-					}}
-				>
-					<Heading align="center" mb="6">
-						What&apos;s{' '}
-						<span className="text-brand-blue-dark">
-							&#123; Included? &#125;
-						</span>
+				<Box>
+					<Heading align="center" className="!mb-[18px] md:!mb-8">
+						What&apos;s <TextWithCurlyBraces>Included?</TextWithCurlyBraces>
 					</Heading>
 
-					<Text as="div" align="center">
-						No fluff, just the good stuff. Get actionable insights and support
-						as you go from JavaScript beginner to JavaScript pro.
+					<Text as="div" align="center" className="md:!mb-20">
+						No fluff, just the good stuff. Get actionable insights and instant
+						support in your journey for JavaScript mastery.
 					</Text>
 				</Box>
 
@@ -170,7 +163,7 @@ const TabItem = ({ t }: { t: (typeof tabsData)[number] }) => {
 				</Flex>
 
 				{t.CTALink && (
-					<Link href={t.CTALink} target="_blank">
+					<Link href={t.CTALink} target="_blank" className="w-max">
 						<Button
 							outline
 							rightIcon={
@@ -181,7 +174,8 @@ const TabItem = ({ t }: { t: (typeof tabsData)[number] }) => {
 									height={20}
 								/>
 							}
-							textClassName="text-brand-orange font-semibold"
+							textClassName="text-brand-orange font-regular underline underline-offset-[2px]"
+							className="!py-3 !px-10"
 						>
 							{t.CTAText}
 						</Button>
