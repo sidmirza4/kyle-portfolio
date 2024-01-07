@@ -26,7 +26,7 @@ const Button = (props: ButtonProps) => {
 	return (
 		<button
 			className={cn(
-				`w-max rounded-5`,
+				`rounded-5`,
 				`${fullWidth && '!w-full'} 
 					${
 						outline

@@ -33,8 +33,9 @@ const Hero = () => {
 							className="capitalize w-full sm:w-[750px]"
 							size="9"
 						>
-							Build any<TextWithCurlyBraces>JavaScript</TextWithCurlyBraces>
-							project and land your dream tech job
+							Build any&nbsp;
+							<TextWithCurlyBraces>JavaScript</TextWithCurlyBraces> project and
+							land your dream tech job
 						</Heading>
 					</Flex>
 

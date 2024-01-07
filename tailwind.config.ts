@@ -32,7 +32,7 @@ module.exports = {
 				'brand-blue': '#04A9FF',
 				'brand-blue-dark': '#00AAFF',
 				'brand-text-dark': '#0D161B',
-				'brand-bg-dark': '#10191F',
+				'brand-bg-dark': '#101E28',
 				'brand-bg-light': '#204354',
 				'brand-orange': '#EA9324',
 				'brand-white': '#FFF',
@@ -40,15 +40,18 @@ module.exports = {
 				'default-gray': '#F7F7F7',
 				'brand-gray-blue': '#F6FCFF',
 				placeholder: 'rgba(13, 22, 27, 0.4)',
+				'brand-light-black': '#0F171F',
 			},
 
 			boxShadow: {
 				'testimonial-card': '0px 21px 40px 0px rgba(16, 25, 31, 0.04)',
 				'blue-shadow': '0px 11px 64px 0px rgba(4, 169, 255, 0.28)',
+				'learning-step': '0px 30.24px 84.24px 6.48px rgba(4, 169, 255, 0.15);',
 			},
 
 			borderRadius: {
 				'7': '20px',
+				full: '999px',
 			},
 
 			border: {

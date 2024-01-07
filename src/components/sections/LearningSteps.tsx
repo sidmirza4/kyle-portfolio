@@ -1,37 +1,37 @@
 import { Box, Container, Flex, Heading, Section, Text } from '@radix-ui/themes'
 import React from 'react'
-
-// import LearningStep1Image from '../../../public/learning-step-1.svg'
-// import LearningStep2Image from '../../../public/learning-step-2.svg'
-// import LearningStep3Image from '../../../public/learning-step-3.svg'
 import Image from 'next/image'
+
 import TimTestimonial from '../TimTestimonial'
 import TextWithCurlyBraces from '../UI/TextWithCurlyBraces'
+import WorkflowIcon from '../../../public/icons/workflow.svg'
+import TechTribeIcon from '../../../public/icons/tech-tribe.svg'
+import JSIcon from '../../../public/icons/js.svg'
 
 const learningSteps = [
 	{
 		title: 'Choose Your Pack',
 		description:
 			'Select the ideal package for your level and enjoy the freedom to upgrade to a more advanced option as your skills progress.',
-		cover: '/ls-1.svg',
+		icon: WorkflowIcon,
 	},
 	{
 		title: 'Join The Community',
 		description:
 			'Get instant access to step-by-step training, projects, and our community of 14,000+ devs that will take your JavaScript skills to new heights.',
-		cover: '/ls-2.svg',
+		icon: TechTribeIcon,
 	},
 	{
 		title: 'Master JavaScript',
 		description:
 			'Go from JavaScript beginner to JavaScript pro in 4 weeks and confidently build complex projects from scratch.',
-		cover: '/ls-3.svg',
+		icon: JSIcon,
 	},
 ]
 
 const LearningSteps = () => {
 	return (
-		<Section className="text-brand-text-dark bg-blue-gradient !pt-[44px]">
+		<Section className="text-brand-text-dark bg-blue-gradient !pt-[44px] !pb-[90px]">
 			<Container>
 				<Flex justify="center">
 					<TimTestimonial />
@@ -39,13 +39,13 @@ const LearningSteps = () => {
 
 				<Flex justify="center">
 					<Heading
-						className="capitalize text-ellipsis w-full sm:w-[950px]"
+						className="capitalize whitespace-break-spaces w-full sm:w-[950px]"
 						weight="bold"
 						align="center"
 						size="9"
 					>
-						From Basic Concepts To
-						<TextWithCurlyBraces>Complex Projects</TextWithCurlyBraces>In 3
+						From Basic Concepts To{' '}
+						<TextWithCurlyBraces>Complex Projects</TextWithCurlyBraces> In 3
 						Simple Steps
 					</Heading>
 				</Flex>
@@ -65,10 +65,11 @@ const LearningSteps = () => {
 				<Box className="md:mt-[3.75rem] mt-8">
 					<Flex
 						justify="between"
+						align="center"
 						className="flex-col md:flex-row !gap-8 md:gap-4"
 					>
-						{learningSteps.map((ls) => (
-							<StepItem stepItem={ls} key={ls.title} />
+						{learningSteps.map((ls, i) => (
+							<StepItem stepItem={ls} index={i} key={ls.title} />
 						))}
 					</Flex>
 				</Box>
@@ -79,25 +80,26 @@ const LearningSteps = () => {
 
 const StepItem = ({
 	stepItem,
+	index,
 }: {
 	stepItem: (typeof learningSteps)[number]
+	index: number
 }) => {
 	return (
-		<Flex
-			gap={{
-				initial: '3',
-				md: '6',
-			}}
-			direction="column"
-			align="center"
-			className="text-center"
-		>
-			<Image src={stepItem.cover} width={216} height={216} alt="Cover-1" />
-			<Heading size="6" as="h4">
+		<Flex direction="column" align="center" className="text-center">
+			<div className="h-[13.5rem] w-[13.5rem] rounded-full bg-brand-white flex items-center justify-center shadow-learning-step relative mb-[38px] md:mb-[52px]">
+				<Image src={stepItem.icon} alt={stepItem.title} />
+
+				<div className="absolute border-2 border-brand-white bg-brand-blue text-brand-white font-bold w-8 h-8 rounded-full flex items-center justify-center bottom-0 translate-y-1/2">
+					<Text>{index + 1}</Text>
+				</div>
+			</div>
+
+			<Text className="text-heading3 font-bold !mb-5" as="p">
 				{stepItem.title}
-			</Heading>
-			<div className="md:w-10/12">
-				<Text>{stepItem.description}</Text>
+			</Text>
+			<div className="w-full sm:w-1/2 md:w-10/12">
+				<Text className="text-brand-light-black">{stepItem.description}</Text>
 			</div>
 		</Flex>
 	)
