@@ -70,6 +70,11 @@ module.exports = {
 				heading3: '1.625rem', // 26px
 				heading4: '1.375rem', // 22px
 				heading6: '1rem', // 16px
+				large: '2rem', // 32px
+			},
+
+			lineHeight: {
+				large: '38px',
 			},
 
 			fontWeight: {
