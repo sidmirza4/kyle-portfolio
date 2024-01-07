@@ -51,7 +51,7 @@ const Button = (props: ButtonProps) => {
 							'text-2': size === 'sm',
 							'text-5': size === 'lg',
 						},
-						`${textClassName}`
+						textClassName
 					)}
 				>
 					{children}

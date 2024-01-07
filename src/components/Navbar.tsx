@@ -12,6 +12,7 @@ import Hamburger from '../../public/hamburger.svg'
 import { JS_SIMPLIFIED_LOGIN } from '@/lib/constants'
 import Button from './UI/Button'
 import FireIcon from '../../public/fire.svg'
+import CTA from './UI/CTA'
 
 const Navbar = () => {
 	return (
@@ -40,14 +41,9 @@ const Navbar = () => {
 
 				<div className="flex items-center gap-9 ml-auto">
 					<LoginButton />
-					<Button
-						rightIcon={<Image src={FireIcon} alt="fire" />}
-						textClassName="uppercase"
-						size="md"
-						className="hidden sm:block"
-					>
-						get instant access now
-					</Button>
+					<div className="hidden sm:block">
+						<CTA size="md" />
+					</div>
 				</div>
 			</Flex>
 		</Container>

@@ -9,6 +9,7 @@ import Link from 'next/link'
 import { JS_SIMPLIFIED_COURSES_URL, TIM_YOUTUBE_URL } from '@/lib/constants'
 import TextWithCurlyBraces from '../UI/TextWithCurlyBraces'
 import FireIcon from '../../../public/fire.svg'
+import CTA from '../UI/CTA'
 
 const Hero = () => {
 	return (
@@ -91,16 +92,8 @@ const Hero = () => {
 						/>
 					</Flex>
 
-					<Flex justify="center">
-						<Link href={JS_SIMPLIFIED_COURSES_URL} target="_blank">
-							<Button
-								size="lg"
-								rightIcon={<Image src={FireIcon} alt="fire" />}
-								textClassName="uppercase"
-							>
-								get instant access now
-							</Button>
-						</Link>
+					<Flex justify="center" className="">
+						<CTA />
 					</Flex>
 
 					{/* <HeroTestimonial /> */}

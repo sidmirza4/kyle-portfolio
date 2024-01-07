@@ -9,65 +9,74 @@ import {
 } from '@radix-ui/themes'
 import Image from 'next/image'
 import React from 'react'
-import Button from '../UI/Button'
 import Link from 'next/link'
+import Button from '../UI/Button'
+
 import { JS_SIMPLIFIED_COURSES_URL } from '@/lib/constants'
+import TextWithCurlyBraces from '../UI/TextWithCurlyBraces'
+import BuildIcon from '../../../public/icons/build.svg'
+import MindIcon from '../../../public/icons/mind.svg'
+import ThumbIcon from '../../../public/icons/thumb.svg'
+import CoderIcon from '../../../public/icons/coder.svg'
+import JobIcon from '../../../public/icons/job.svg'
+import AdvantageIcon from '../../../public/icons/advantage.svg'
+import CTA from '../UI/CTA'
 
 const benefits = [
 	{
-		title: 'Master the Art of Building Any Project',
+		title: 'Master The Art Of Building',
 		description:
-			'No more Googling for basic information. Break free from guided projects and learn everything you need to create diverse apps on your own.',
-		icon: '/build.svg',
+			'Get unstuck immediately and build complex projects with confidence. No more Googling or watching YouTube tutorials for basic gaps.',
+		icon: BuildIcon,
 	},
 	{
 		title: 'Learn How to Think Like a Developer',
 		description:
-			"Sharpen your problem-solving skills and cultivate a developer's mindset through numerous exercises and projects.",
-		icon: '/mind.svg',
+			'The best devs know how to deconstruct complex projects into fundamentals truths. You will learn how to think like an unstoppable dev.',
+		icon: MindIcon,
 	},
 	{
-		title: 'Achieve Better Work-Life Balance',
+		title: 'Improve Your Quality Of Life',
 		description:
-			'Gain the ability to work remotely, freelance, or explore various job opportunities for a better work-life balance.',
-		icon: '/thumb.svg',
+			'The best devs can not only open doors to high-paying tech jobs but they also have more free time with their friends and families.',
+		icon: ThumbIcon,
 	},
 	{
-		title: 'Boost Your Coding Confidence',
+		title: 'Join Our Tribe Of 14,000+ devs',
 		description:
-			'Say goodbye to frustration and become a confident JavaScript developer ready to tackle any coding challenge.',
-		icon: '/coder.svg',
+			'Find your co-builders for life and grow your network in our tribe of 14,000+ devs. Get unstuck in minutes by receiving instant support.',
+		icon: CoderIcon,
 	},
 	{
-		title: 'Develop Job-Ready Skills',
+		title: 'Stack Skills For Your Dream Job',
 		description:
-			'Build skills that make you a valuable asset in the job market, potentially leading to better job opportunities and increased earning potential.',
-		icon: '/job.svg',
+			'Build high-value skills for senior dev roles like mindset, first principles thinking, systems thinking, dev interviews and JavaScript mastery.',
+		icon: JobIcon,
 	},
 	{
-		title: 'Increase Your Earning Potential',
+		title: 'Build your Unfair Advantage',
 		description:
-			'Acquire in-demand skills that can open doors to higher-paying opportunities in the rapidly evolving tech industry.',
-		icon: '/earning.svg',
+			'This course goes beyond the typical JavaScript course. You will learn concepts that most people don’t discover until years into their first job.',
+		icon: AdvantageIcon,
 	},
-	{
-		title: 'Enjoy More Flexibility',
-		description:
-			'Choose how and where you work and shape a professional life that aligns with your own schedule and preferences.',
-		icon: '/calendar.svg',
-	},
-	{
-		title: 'Join a Thriving Community',
-		description:
-			'Interact with over 14,000 developers, expand your professional network, and unlock opportunities for collaboration and mentorship.',
-		icon: '/community.svg',
-	},
+	// {
+	// 	title: 'Enjoy More Flexibility',
+	// 	description:
+	// 		'Choose how and where you work and shape a professional life that aligns with your own schedule and preferences.',
+	// 	icon: '/calendar.svg',
+	// },
+	// {
+	// 	title: 'Join a Thriving Community',
+	// 	description:
+	// 		'Interact with over 14,000 developers, expand your professional network, and unlock opportunities for collaboration and mentorship.',
+	// 	icon: '/community.svg',
+	// },
 ]
 
 const Benefits = () => {
 	return (
 		<Section
-			className="bg-blue-gradient-reverse text-brand-text-dark"
+			className="bg-blue-gradient text-brand-text-dark !pt-[100px] !pb-[55px]"
 			id="benefits"
 		>
 			<Container>
@@ -80,52 +89,42 @@ const Benefits = () => {
 				>
 					<Box>
 						<Heading
-							className="mb-5 md:!mb-[1.875rem]"
-							weight="bold"
+							className="mb-5 md:!mb-[1.875rem] capitalize"
 							align="center"
 						>
-							Top Benefits
+							land your dream{' '}
+							<TextWithCurlyBraces>tech job</TextWithCurlyBraces>
 						</Heading>
 
 						<Text
 							align="center"
+							weight="bold"
 							size={{
 								initial: '3',
 								md: '5',
 							}}
 							as="div"
 						>
-							Explore the multitude of perks that come with JavaScript
-							Simplified
+							The program is designed to evolve you into a dream candidate with
+							the right skills.
 						</Text>
 					</Box>
 
 					<Grid
-						columns="2"
+						columns={{
+							initial: '1',
+							xs: '2',
+						}}
 						width="auto"
-						className="gap-y-4 gap-x-[1.6rem] lg:gap-y-[1.875rem] lg:gap-x-[2.875rem]"
+						className="gap-y-[30px] gap-x-[46px] lg:gap-y-[1.875rem] lg:gap-x-[2.875rem]"
 					>
 						{benefits.map((b) => (
 							<BenefitItem benefit={b} key={b.title} />
 						))}
 					</Grid>
 
-					<Flex justify="center">
-						<Link href={JS_SIMPLIFIED_COURSES_URL} target="_blank">
-							<Button
-								rightIcon={
-									<Image
-										src="/right-arrow.svg"
-										alt="arrow"
-										width={20}
-										height={20}
-									/>
-								}
-								textClassName="uppercase !text-brand-white"
-							>
-								start leaning now
-							</Button>
-						</Link>
+					<Flex justify="center" className="text-brand-white">
+						<CTA />
 					</Flex>
 				</Flex>
 			</Container>
@@ -139,7 +138,13 @@ const BenefitItem = ({ benefit }: { benefit: (typeof benefits)[number] }) => {
 			className="md:p-5 p-4 rounded-7 border border-border-defaut"
 			align="center"
 		>
-			<Flex className="gap-[.625rem] flex-col md:flex-row" align="center">
+			<Flex
+				className="gap-[.625rem] flex-col md:flex-row"
+				align={{
+					initial: 'start',
+					md: 'center',
+				}}
+			>
 				<Image
 					src={benefit.icon}
 					height={100}
@@ -147,9 +152,9 @@ const BenefitItem = ({ benefit }: { benefit: (typeof benefits)[number] }) => {
 					alt={benefit.title}
 				/>
 				<Box>
-					<Heading as="h6" mb="4">
+					<Text as="p" mb="4" className="text-heading4 font-semibold">
 						{benefit.title}
-					</Heading>
+					</Text>
 					<Text
 						size={{
 							initial: '2',
