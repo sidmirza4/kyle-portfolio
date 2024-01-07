@@ -2,7 +2,7 @@ import { Box, Container, Flex, Heading, Section, Text } from '@radix-ui/themes'
 import Image from 'next/image'
 import React from 'react'
 import Button from '../UI/Button'
-import TimDP from '../../../public/tim-dp.png'
+// import TimDP from '../../../public/tim-dp.png'
 import { HappyCustomers } from '../HappyCustomers'
 import { TextWithCheckMark } from '../TextWithCheckMark'
 import Link from 'next/link'
@@ -33,8 +33,9 @@ const Hero = () => {
 							className="capitalize w-full sm:w-[750px]"
 							size="9"
 						>
-							Build any<TextWithCurlyBraces>JavaScript</TextWithCurlyBraces>
-							project and land your dream tech job
+							Build any&nbsp;
+							<TextWithCurlyBraces>JavaScript</TextWithCurlyBraces> project and
+							land your dream tech job
 						</Heading>
 					</Flex>
 
@@ -116,55 +117,55 @@ const Hero = () => {
 	)
 }
 
-const HeroTestimonial = () => {
-	return (
-		<Flex gap="4" className="flex-col md:flex-row">
-			<Flex
-				className="shrink-0"
-				align={{
-					initial: 'center',
-					md: 'start',
-				}}
-				gap="5"
-			>
-				<Link href={TIM_YOUTUBE_URL} target="_blank">
-					<Image src={TimDP} alt="tim" />
-				</Link>
-				<div className="block md:hidden">
-					<Flex gap="3">
-						<Image src="/youtube.svg" alt="youtube" width={19} height={19} />
-						<Text size="1">
-							<Text weight="bold">1.3M+</Text> Subscribers
-						</Text>
-					</Flex>
-				</div>
-			</Flex>
+// const HeroTestimonial = () => {
+// 	return (
+// 		<Flex gap="4" className="flex-col md:flex-row">
+// 			<Flex
+// 				className="shrink-0"
+// 				align={{
+// 					initial: 'center',
+// 					md: 'start',
+// 				}}
+// 				gap="5"
+// 			>
+// 				<Link href={TIM_YOUTUBE_URL} target="_blank">
+// 					{/* <Image src={TimDP} alt="tim" /> */}
+// 				</Link>
+// 				<div className="block md:hidden">
+// 					<Flex gap="3">
+// 						<Image src="/youtube.svg" alt="youtube" width={19} height={19} />
+// 						<Text size="1">
+// 							<Text weight="bold">1.3M+</Text> Subscribers
+// 						</Text>
+// 					</Flex>
+// 				</div>
+// 			</Flex>
 
-			<Box>
-				{/* <Flex justify="between" className="mb-[6px]"> */}
-				{/* <FiveStars /> */}
-				<div className="hidden md:block">
-					<Flex gap="3">
-						<Image src="/youtube.svg" alt="youtube" width={19} height={19} />
-						<Text size="1">
-							<Text weight="bold">1.3M+</Text> Subscribers
-						</Text>
-					</Flex>
-				</div>
-				{/* </Flex> */}
-				<Text size="1">
-					&#34;Kyle is a phenomenal instructor with an unmatched ability to
-					break down complex topics and make even the most challenging problems
-					digestible. Not only does he teach you the theory but he tests you
-					every step of the way with practical projects and exercises that are
-					fun and challenging. Seeing how Kyle designs his courses blew me away,
-					the amount of effort and thought into the students experience is next
-					to none.&#34;
-				</Text>
-				<p className="text-[9px] mt-[6px]">Tim Ruscica, YouTuber</p>
-			</Box>
-		</Flex>
-	)
-}
+// 			<Box>
+// 				{/* <Flex justify="between" className="mb-[6px]"> */}
+// 				{/* <FiveStars /> */}
+// 				<div className="hidden md:block">
+// 					<Flex gap="3">
+// 						<Image src="/youtube.svg" alt="youtube" width={19} height={19} />
+// 						<Text size="1">
+// 							<Text weight="bold">1.3M+</Text> Subscribers
+// 						</Text>
+// 					</Flex>
+// 				</div>
+// 				{/* </Flex> */}
+// 				<Text size="1">
+// 					&#34;Kyle is a phenomenal instructor with an unmatched ability to
+// 					break down complex topics and make even the most challenging problems
+// 					digestible. Not only does he teach you the theory but he tests you
+// 					every step of the way with practical projects and exercises that are
+// 					fun and challenging. Seeing how Kyle designs his courses blew me away,
+// 					the amount of effort and thought into the students experience is next
+// 					to none.&#34;
+// 				</Text>
+// 				<p className="text-[9px] mt-[6px]">Tim Ruscica, YouTuber</p>
+// 			</Box>
+// 		</Flex>
+// 	)
+// }
 
 export default Hero
