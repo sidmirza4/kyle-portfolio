@@ -70,10 +70,10 @@ const packages = [
 		name: 'complete',
 		price: 299,
 		discountedPrice: 197,
-		badge: 'best value',
 		badgeBG: 'bg-brand-bg-light',
 		features: [
 			'<Strong>Everything in the Basic Package</Strong>',
+			'Entire <Strong>JavaScript Simplified - Advanced</Strong> course',
 			'Over <Strong>27 hours</Strong> of content across <Strong>140 videos</Strong>',
 			'Download all videos for <Strong>offline access</Strong>',
 			'Before and after source code for all projects',
@@ -100,11 +100,11 @@ const packages = [
 const Pricing = () => {
 	return (
 		<Section
-			className="py-[6.25rem] text-brand-text-dark bg-blue-gradient-reverse"
+			className="!py-10 md:!py-[100px] text-brand-text-dark bg-blue-gradient"
 			id="packages"
 		>
 			<Container>
-				<Heading className="!mb-14 md:!mb-20" align="center">
+				<Heading className="!mb-[46px] md:!mb-20" align="center">
 					Everything You Need To Build At Any Level
 				</Heading>
 
@@ -112,8 +112,7 @@ const Pricing = () => {
 					align="center"
 					className={cn(
 						'[&>*:nth-child(odd)]:bg-default-gray [&>*:nth-child(2)]:bg-brand-white [&>*:nth-child(2)]:border-4 md:[&>*:nth-child(2)]:border-8 [&>*:nth-child(2)]:border-brand-blue [&>*:nth-child(2)]:shadow-blue-shadow',
-						'flex-col md:flex-row gap-12 md:gap-7',
-						'[&>*:nth-child(odd)]:order-2 md:[&>*:nth-child(odd)]:order-none',
+						'flex-col-reverse md:flex-row gap-8 md:gap-7',
 						'[&>*:nth-child(2)]:order-1 md:[&>*:nth-child(2)]:order-none'
 					)}
 				>

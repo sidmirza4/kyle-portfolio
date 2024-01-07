@@ -49,7 +49,7 @@ const Button = (props: ButtonProps) => {
 						{
 							'text-3': size === 'md',
 							'text-2': size === 'sm',
-							'text-5': size === 'lg',
+							'!text-5': size === 'lg',
 						},
 						textClassName
 					)}
