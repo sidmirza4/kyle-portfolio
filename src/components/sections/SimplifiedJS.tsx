@@ -71,14 +71,7 @@ const MultiStepSystem = () => {
 	}
 
 	return (
-		<Flex
-			direction={{
-				initial: 'column',
-				md: 'row',
-			}}
-			align="center"
-			gap="9"
-		>
+		<Flex className="flex-col md:flex-row" align="center" gap="9">
 			<StockImage className="hidden md:block" />
 			<Flex direction="column" className="!gap-4 md:!gap-[26px] basis-1/2">
 				<StepHeading>Proven, Multi-Step and Actionable System</StepHeading>
@@ -116,7 +109,7 @@ const MultiStepSystem = () => {
 const DiscordCommunity = () => {
 	const StockImage = ({ className }) => (
 		<div className={`basis-1/2 ${className}`}>
-			<div className="aspect-auto w-full h-full flex items-center justify-end">
+			<div className="aspect-auto w-full h-full flex items-center">
 				<Image
 					src="/images/discord-channel.png"
 					width={530}
@@ -129,10 +122,7 @@ const DiscordCommunity = () => {
 
 	return (
 		<Flex
-			direction={{
-				initial: 'column',
-				md: 'row',
-			}}
+			className="flex-col md:flex-row"
 			align="center"
 			gap="9"
 			justify="between"
@@ -188,17 +178,9 @@ const DreamJob = () => {
 	}
 
 	return (
-		<Flex
-			direction={{
-				initial: 'column',
-				md: 'row',
-			}}
-			align="center"
-			gap="9"
-		>
+		<Flex className="flex-col md:flex-row" align="center" gap="9">
+			<StockImage className="hidden md:block" />
 			<Flex direction="column" className="!gap-[26px] basis-1/2">
-				<StockImage className="hidden md:block" />
-
 				<StepHeading>Supercharge The Path To Your Dream Job</StepHeading>
 
 				<Paragraph>
@@ -206,9 +188,9 @@ const DreamJob = () => {
 					from rock stars like Danny Thompson, Eddie Jaoude, Dorian and Jessica.
 				</Paragraph>
 
-				<StockImage className="block md:hidden" />
+				<StockImage className="block md:hidden !-mt-10" />
 
-				<Flex direction="column" gap="4">
+				<Flex direction="column" gap="4" className="!-mt-20 md:!mt-0">
 					<TextWithCheckMark>
 						Build <BlueBoldText>any project effortlessly</BlueBoldText> in
 						record time.
