@@ -19,9 +19,9 @@ export default function Home() {
 			<LearningSteps />
 			<Intro />
 			<Benefits />
+			<Testimonial />
 			<Included />
 			<SimplifiedJS />
-			<Testimonial />
 			<Pricing />
 			<FAQ />
 			<Footer />

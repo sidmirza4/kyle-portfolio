@@ -51,6 +51,10 @@ h6 {
 	@apply -ml-1.5;
 }
 
+.clubbed-customers-lg:not(:first-child) {
+	@apply -ml-3 border-2;
+}
+
 .layer {
 	background: linear-gradient(0deg, #FFF 45.2%, rgba(255, 255, 255, 0.00) 240.5%), url('/kyle.png'), lightgray -120px -14.583px / 166.667% 78.901% no-repeat;
 	background-size: cover;

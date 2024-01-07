@@ -1,5 +1,5 @@
 'use client'
-import { Container, Flex, Heading, Section, Text } from '@radix-ui/themes'
+import { Box, Container, Flex, Heading, Section, Text } from '@radix-ui/themes'
 import Image from 'next/image'
 import { HappyCustomers } from '../HappyCustomers'
 import Button from '../UI/Button'
@@ -9,8 +9,48 @@ import React, { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
 import { JS_SIMPLIFIED_COURSES_URL } from '@/lib/constants'
+import TextWithCurlyBraces from '../UI/TextWithCurlyBraces'
+import FiveStars from '../UI/FiveStars'
 
 const testimonials = [
+	{
+		message: `Buying Kyle's JavaScript Simplified course is the best decision I have made in my learning journey. It helped me a lot with the project I am working on and I finally began to love JavaScript after following Kyle's teachings.`,
+		name: 'Jinka Ajay',
+		profile: '/customer-4.png',
+	},
+	{
+		message: `Wow! I tried other courses before I found JavaScript Simplified and had lots of trouble wrapping my head around concepts like event listeners. I felt like I would never get the hang of JavaScript, and I really considered giving up. Until now! Taking Kyle's course has helped me understand so much already and I am only 25% done. I've seen all these concepts before, but never understand how they fit together until taking JavaScript Simplified.`,
+		name: 'Robert Provost',
+		profile: '/customer-1.png',
+	},
+	{
+		message: `I've used JavaScript self taught for awhile. For the longest time I defaulted to jQuery, but recently started going back to basics and it's amazing the things you miss when you're self taught. JavaScript Simplified is filing in those gaps for me!`,
+		name: 'Andrew Sharpe',
+		profile: '/customer-2.png',
+	},
+	{
+		message: `Although I have a fundamental understanding of JavaScript, I learned a lot from the advanced sections of this course. Honestly, it's the most comprehensive JavaScript course I've ever seen.`,
+		name: 'Claudio Bernasconi',
+		profile: '/customer-5.png',
+	},
+
+	{
+		message: `Kyle's content goes beyond the average in both quality and depth. With his dedication to excellence, there's no better option when it comes to learning web development.`,
+		name: 'Caleb Curry',
+		profile: '/caleb.png',
+	},
+	{
+		message: `I've not been active in the chat of the course, but after finishing it want to thank you for everything and how you simplified concepts that, at least while self-learning, are so complicated.<br />
+		At first, when I opened the before document I was overwhelmed. Then, after 2/3 days of coding in my free time, l've been able to make it work with all the functionalities without watching the video (neither the finished code!).`,
+		name: 'Bart Erkamp',
+		profile: '/bart.png',
+	},
+
+	{
+		message: `JavaScript Simplified is concise, to the point, and full of fun projects which constantly had me putting together what I had learned in challenging ways.`,
+		name: 'Brent Morton',
+		profile: '/brent.png',
+	},
 	{
 		message: `Kyle, this is worth the price of admission. That was the best explanation you are ever going to see on array methods.
 			There are 15-20 videos on each of those online and its very difficult to grasp.
@@ -21,23 +61,6 @@ const testimonials = [
 	{
 		message: `loving and learning a bunch from this course! aside from breaking down concepts in easily digestible bits, you offer fun mini exercises in each subsection and reassurance that some things *are* hard, which are things i haven't experienced with other JS courses. i was about to give up on programming until I found your course!! thank you`,
 		name: 'Vera Lam',
-	},
-	{
-		message: `I've not been active in the chat of the course, but after finishing it want to thank you for everything and how you simplified concepts that, at least while self-learning, are so complicated.<br />
-		At first, when I opened the before document I was overwhelmed. Then, after 2/3 days of coding in my free time, l've been able to make it work with all the functionalities without watching the video (neither the finished code!).`,
-		name: 'Bart Erkamp',
-	},
-	{
-		message: `Although I have a fundamental understanding of JavaScript, I learned a lot from the advanced sections of this course. Honestly, it's the most comprehensive JavaScript course I've ever seen.`,
-		name: 'Claudio Bernasconi',
-	},
-	{
-		message: `Kyle's content goes beyond the average in both quality and depth. With his dedication to excellence, there's no better option when it comes to learning web development.`,
-		name: 'Caleb Curry',
-	},
-	{
-		message: `JavaScript Simplified is concise, to the point, and full of fun projects which constantly had me putting together what I had learned in challenging ways.`,
-		name: 'Brent Morton',
 	},
 ]
 
@@ -108,10 +131,10 @@ const Testimonial = () => {
 					<Flex align="center" direction="column">
 						<Heading className="capitalize !mb-1" align="center">
 							Real Words From Our Satisfied{' '}
-							<span className="text-brand-blue">&#123; Devs &#125;</span>
+							<TextWithCurlyBraces>Devs</TextWithCurlyBraces>
 						</Heading>
 
-						<HappyCustomers transparent dpWidth={137} />
+						<HappyCustomers transparent dpWidth={37} />
 					</Flex>
 					<div className="relative">
 						<div className="pl-px overflow-x-hidden">
@@ -170,39 +193,48 @@ const TestimonialItem = ({
 	return (
 		<div>
 			<div className="relative border-[#C3D5E5] border bg-brand-white !rounded-[20px] py-9 px-6 shadow-testimonial-card">
-				{/* <div className="absolute -top-[44px] left-1/2 -translate-x-1/2">
-					<Image
-						src={testimonial.profile}
-						alt="profile"
-						width={88}
-						height={88}
-					/>
-				</div> */}
 				<Flex align="center" direction="column" className="!gap-[20px]">
-					{/* <FiveStars size={16} /> */}
+					<FiveStars size={14} />
 					<Text
 						align="center"
 						dangerouslySetInnerHTML={{
 							__html: `&ldquo;${testimonial.message}&rdquo;`,
 						}}
 					/>
-					<Heading className="capitalize" size="4" as="h5">
-						{testimonial.name}
-					</Heading>
-					{/* <Flex className="gap-[6px]">
+					<Flex align="center" gap="4">
 						<Image
-							src="/tick-circle.svg"
-							alt="tick-circle"
-							width={14}
-							height={14}
+							src={testimonial.profile || '/profile-fallback.png'}
+							alt={testimonial.name}
+							width={52}
+							height={52}
+							className="!rounded-full border-2 border-brand-blue"
 						/>
-						<Text size="2" className="text-brand-blue">
-							Verified Buyer
-						</Text>
-					</Flex> */}
+						<Flex direction="column" gap="2">
+							<Text className="capitalize" size="4">
+								{testimonial.name}
+							</Text>
+							<VerifiedBadge />
+						</Flex>
+					</Flex>
 				</Flex>
 			</div>
 		</div>
+	)
+}
+
+const VerifiedBadge = () => {
+	return (
+		<Flex className="gap-[6px]" align="center">
+			<Image
+				src="/icons/verified-rounded.svg"
+				alt="verified"
+				width={14}
+				height={14}
+			/>
+			<Text className="text-gray-11 !text-[8px]">
+				<em>Verified Buyer</em>
+			</Text>
+		</Flex>
 	)
 }
 
