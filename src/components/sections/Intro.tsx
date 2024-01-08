@@ -30,9 +30,9 @@ const Intro = () => {
 
 			</div> */}
 			<div className='block md:hidden h-[calc(100vw)] w-full relative' style={{background: 'linear-gradient(180deg, rgba(16, 30, 40, 0.00) 0%, #101E28 100%)'}}>
-				<Image src="/kyle4.png" alt='Kyle Image' fill />
+				<Image src="/kyle3.png" alt='Kyle Image' fill />
 			</div>
-			<div className='w-full z-10 px-10 md:pt-10 pb-20 relative -top-[80px]'>
+			<div className='w-full z-10 px-10 md:pt-10 pb-20 relative -top-[80px] md:top-0'>
 				<div className="md:w-[50%]">
 					<Flex direction="column" gap="6" className="">
 						<Box>
