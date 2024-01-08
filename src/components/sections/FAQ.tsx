@@ -55,7 +55,13 @@ const faqs = [
 
 const FAQ = () => {
 	return (
-		<Section className="text-brand-white bg-brand-bg-dark !pt-10 !pb-[30px] md:!py-[100px]">
+		<Section
+			className="bg-brand-bg-dark text-brand-white !pt-10 !pb-[30px] md:!py-[100px]"
+			style={{
+				backgroundImage: 'url(/backgrounds/faq-bg.png)',
+				backgroundSize: 'cover',
+			}}
+		>
 			<Container>
 				<Box
 					mb={{
