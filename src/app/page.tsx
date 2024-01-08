@@ -21,9 +21,10 @@ export default function Home() {
 			<LearningSteps />
 			<Intro />
 			<Benefits />
-			<Testimonial />
+			<Testimonial showTopThree={true} />
 			<Included />
 			<SimplifiedJS />
+			<Testimonial />
 			<Pricing />
 			<FAQ />
 			<Footer />

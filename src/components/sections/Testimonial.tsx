@@ -87,7 +87,7 @@ const CarouselNextItemButton = (props: React.ButtonHTMLAttributes<{}>) => {
 	)
 }
 
-const Testimonial = () => {
+const Testimonial = ({ showTopThree = false }: { showTopThree: boolean }) => {
 	const [numberOfItemsPerSlide, setNumberOfItemsPerSlide] = useState(1)
 
 	useEffect(() => {
@@ -110,13 +110,15 @@ const Testimonial = () => {
 		if (width >= xs) return 1
 	}
 
+	const items = showTopThree ? testimonials.slice(0, 3) : testimonials.slice(3)
+
 	const { carouselFragment, slideToPrevItem, slideToNextItem } =
 		useSpringCarousel({
 			gutter: 26,
 			itemsPerSlide: numberOfItemsPerSlide,
 			withLoop: true,
 			initialStartingPosition: 'start',
-			items: testimonials.map((testimonial) => {
+			items: items.map((testimonial) => {
 				return {
 					id: testimonial.name,
 					renderItem: <TestimonialItem testimonial={testimonial} />,
@@ -139,10 +141,12 @@ const Testimonial = () => {
 					</Flex>
 					<div className="relative">
 						<div className="pl-px overflow-x-hidden">
-							<CarouselPrevItemButton
-								onClick={slideToPrevItem}
-								className="-translate-x-1/2 top-1/2"
-							/>
+							{!showTopThree && (
+								<CarouselPrevItemButton
+									onClick={slideToPrevItem}
+									className="-translate-x-1/2 top-1/2"
+								/>
+							)}
 							<div className="py-[3.75rem]">
 								{carouselFragment}
 								{/* <Flex className="!gap-5" align="center" justify="center">
@@ -156,17 +160,21 @@ const Testimonial = () => {
 									/>
 								</Flex> */}
 							</div>
-							<CarouselNextItemButton
-								onClick={slideToNextItem}
-								className="translate-x-1/2 right-0 top-1/2"
-							/>
+							{!showTopThree && (
+								<CarouselNextItemButton
+									onClick={slideToNextItem}
+									className="translate-x-1/2 right-0 top-1/2"
+								/>
+							)}
 						</div>
 					</div>
 				</Flex>
 
-				<Flex justify="center" className="text-brand-white">
-					<CTA />
-				</Flex>
+				{!showTopThree && (
+					<Flex justify="center" className="text-brand-white">
+						<CTA />
+					</Flex>
+				)}
 			</Container>
 		</Section>
 	)
