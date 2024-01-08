@@ -21,6 +21,8 @@ module.exports = {
 					'linear-gradient(360deg, #EBF8FF 0%, rgba(255, 255, 255, 0.00) 100%);',
 				'blue-gradient-reverse':
 					'linear-gradient(180deg, #EBF8FF 0%, rgba(255, 255, 255, 0.00) 100%);',
+				'primary-gradient':
+					'linear-gradient(90deg, #00329F -0.95%, #02B4FE 100.95%);',
 			},
 
 			filter: {
@@ -91,10 +93,19 @@ module.exports = {
 					from: { height: 'var(--radix-accordion-content-height)' },
 					to: { height: '0' },
 				},
+				marquee: {
+					from: {
+						transform: 'translateX(100%)',
+					},
+					to: {
+						transform: 'translateX(-130%)',
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
+				marquee: 'marquee 20s linear infinite',
 			},
 		},
 

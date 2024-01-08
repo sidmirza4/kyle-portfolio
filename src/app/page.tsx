@@ -10,10 +10,12 @@ import Included from '@/components/sections/Included'
 import Pricing from '@/components/sections/Pricing'
 import FAQ from '@/components/sections/FAQ'
 import Footer from '@/components/sections/Footer'
+import DiscountBanner from '@/components/DiscountBanner'
 
 export default function Home() {
 	return (
 		<>
+			<DiscountBanner />
 			<Navbar />
 			<Hero />
 			<LearningSteps />
