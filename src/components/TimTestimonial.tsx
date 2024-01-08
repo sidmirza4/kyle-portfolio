@@ -10,7 +10,7 @@ import { TIM_YOUTUBE_URL } from '@/lib/constants'
 const TimTestimonial = () => {
 	return (
 		<div className="pb-[105px]">
-			<div className="flex relative flex-col sm:flex-row gap-9 p-[18px] items-center bg-brand-gray-blue border border-[#141D25]/10 rounded-3 md:w-[932px]">
+			<div className="flex relative flex-col sm:flex-row gap-9 p-[18px] items-center bg-brand-gray-blue border border-[#141D25]/10 rounded-3 lg:w-[932px]">
 				<Image
 					src="/tim-photo.png"
 					alt="tim"
