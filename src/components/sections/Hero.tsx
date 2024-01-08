@@ -20,18 +20,30 @@ const Hero = () => {
 				backgroundSize: 'cover',
 				backgroundRepeat: 'no-repeat',
 			}}
-			className="!pt-[90px] !pb-[45px] text-brand-white"
+			className="!pb-[58px] !pt-[30px] md:!pt-[90px] md:!pb-[45px] text-brand-white"
 		>
 			<Container>
 				{/* <Flex gap="8" align="center"> */}
 				<Box>
-					<Flex mb="7" justify="center">
+					<Flex
+						mb={{
+							initial: '4',
+							sm: '7',
+						}}
+						justify={{
+							initial: 'start',
+							sm: 'center',
+						}}
+					>
 						<HappyCustomers />
 					</Flex>
 
-					<Flex justify="center" className="!mb-[50px]">
+					<Flex justify="center" className="!mb-8 md:!mb-[50px]">
 						<Heading
-							align="center"
+							align={{
+								initial: 'left',
+								sm: 'center',
+							}}
 							className="capitalize w-full sm:w-[750px]"
 							size="9"
 						>
@@ -41,15 +53,26 @@ const Hero = () => {
 						</Heading>
 					</Flex>
 
+					<iframe
+						className="w-full aspect-video rounded-4 max-w-[512px] !block sm:!hidden mb-[42px]"
+						src="https://www.youtube-nocookie.com/embed/5H2_bBtmDBE?si=I9K3vfwrgDBy26Cu&amp;controls=0"
+						title="24 hour sale"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+						allowFullScreen
+					></iframe>
+
 					<Flex justify="center">
 						<Text
-							className="font-semibold w-full sm:w-[700px] !mb-[50px]"
+							className="font-semibold w-full sm:w-[700px] !mb-8 md:!mb-[50px]"
 							size={{
 								initial: '3',
 								md: '5',
 							}}
 							as="p"
-							align="center"
+							align={{
+								initial: 'left',
+								sm: 'center',
+							}}
 						>
 							JavaScript Simplified is a multi-step system for my community of
 							14,000+ developers to build their dream projects and land their
@@ -63,7 +86,7 @@ const Hero = () => {
 							initial: 'column',
 							sm: 'row',
 						}}
-						className="!mb-[60px]"
+						className="!mb-12 md:!mb-[60px]"
 					>
 						<TextWithCheckMark checkType="circle">
 							Get instant results with
@@ -84,13 +107,22 @@ const Hero = () => {
 						</TextWithCheckMark>
 					</Flex>
 
-					<Flex justify="center" className="!mb-10">
+					{/* <Flex justify="center" className="!mb-10">
 						<Image
 							src="/hero-video-poster.svg"
 							height={322}
 							width={572}
 							alt="hero video"
 						/>
+					</Flex> */}
+					<Flex justify="center" className="!mb-10 !hidden sm:!block">
+						<iframe
+							className="w-full aspect-video rounded-4 max-w-[512px] hidden sm:!block mx-auto"
+							src="https://www.youtube-nocookie.com/embed/5H2_bBtmDBE?si=I9K3vfwrgDBy26Cu&amp;controls=0"
+							title="24 hour sale"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowFullScreen
+						></iframe>
 					</Flex>
 
 					<Flex justify="center" className="">
