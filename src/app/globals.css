@@ -61,8 +61,6 @@ h6 {
 	background-color: #101E28;
 	background-image: none;
 	@screen md {
-		/* @apply bg-[url('/kyle.png')] bg-no-repeat bg-center sm:bg-right bg-cover sm:bg-contain; */
-		/* background: url('/kyle2.png') no-repeat right; */
 		background: url('/kyle2.png'), #101E28;
 		background-size: 100%;
 		background-size: contain;

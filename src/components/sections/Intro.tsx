@@ -26,9 +26,6 @@ import TextWithCurlyBraces from '../UI/TextWithCurlyBraces'
 const Intro = () => {
 	return (
 		<section className="relative text-brand-text-dark layer flex flex-col lg:flex-row justify-between items-center lg:items-end" id="about">
-			{/* <div style={{ background: 'linear-gradient(180deg, rgba(16, 30, 40, 0.00) 0%, #101E28 100%)' }} className='md:hidden absolute top-[80vw] w-full h-[200px]'>
-
-			</div> */}
 			<div className='block md:hidden h-[calc(100vw)] w-full relative' style={{background: 'linear-gradient(180deg, rgba(16, 30, 40, 0.00) 0%, #101E28 100%)'}}>
 				<Image src="/kyle3.png" alt='Kyle Image' fill />
 			</div>
