@@ -56,12 +56,10 @@ h6 {
 }
 
 .layer {
-	background: linear-gradient(0deg, #FFF 45.2%, rgba(255, 255, 255, 0.00) 240.5%), url('/kyle.png'), lightgray -120px -14.583px / 166.667% 78.901% no-repeat;
-	background-size: cover;
-	background-position: center;
-	@screen md {
-		/* @apply bg-[url('/kyle.png')] bg-no-repeat bg-center sm:bg-right bg-cover sm:bg-contain; */
-		background: url('/kyle.png') no-repeat right;
-		background-size: contain;
-	};
+	color: white;
+	background: url('/kyle2.png'), #101E28;
+	background-size: 100%;
+	background-position: top;
+	background-repeat: no-repeat;
+	padding: 0;
 }
