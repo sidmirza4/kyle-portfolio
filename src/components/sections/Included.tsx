@@ -96,7 +96,15 @@ const tabsData = [
 
 const Included = () => {
 	return (
-		<Section className="bg-brand-bg-dark text-brand-white" id="included">
+		<Section
+			className="text-brand-white bg-brand-bg-dark"
+			id="included"
+			style={{
+				backgroundImage: 'url(/backgrounds/included-bg.png)',
+				backgroundSize: 'cover',
+				backgroundRepeat: 'no-repeat',
+			}}
+		>
 			<Container>
 				<Box>
 					<Heading align="center" className="!mb-[18px] md:!mb-8">

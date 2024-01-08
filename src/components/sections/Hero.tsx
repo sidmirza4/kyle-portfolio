@@ -16,8 +16,9 @@ const Hero = () => {
 		<Section
 			id="hero"
 			style={{
-				backgroundImage: 'url(/hero-bg.png)',
+				backgroundImage: 'url(/backgrounds/hero-bg.png)',
 				backgroundSize: 'cover',
+				backgroundRepeat: 'no-repeat',
 			}}
 			className="!pt-[90px] !pb-[45px] text-brand-white"
 		>
