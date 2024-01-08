@@ -26,12 +26,15 @@ import TextWithCurlyBraces from '../UI/TextWithCurlyBraces'
 const Intro = () => {
 	return (
 		<section className="relative text-brand-text-dark layer flex flex-col lg:flex-row justify-between items-center lg:items-end" id="about">
-			<div style={{ background: 'linear-gradient(180deg, rgba(16, 30, 40, 0.00) 0%, #101E28 100%)' }} className='md:hidden absolute top-[80vw] w-full h-[200px]'>
+			{/* <div style={{ background: 'linear-gradient(180deg, rgba(16, 30, 40, 0.00) 0%, #101E28 100%)' }} className='md:hidden absolute top-[80vw] w-full h-[200px]'>
 
+			</div> */}
+			<div className='block md:hidden h-[calc(100vw)] w-full relative' style={{background: 'linear-gradient(180deg, rgba(16, 30, 40, 0.00) 0%, #101E28 100%)'}}>
+				<Image src="/kyle4.png" alt='Kyle Image' fill />
 			</div>
-			<div className='w-full lg:w-[58%] z-10'>
-				<div className="">
-					<Flex direction="column" gap="6" className="pt-[80vw] md:pt-10 pb-20">
+			<div className='w-full z-10 px-10 md:pt-10 pb-20 relative -top-[80px]'>
+				<div className="md:w-[50%]">
+					<Flex direction="column" gap="6" className="">
 						<Box>
 							<HappyCustomers />
 							<Heading weight="bold" mt="5">
