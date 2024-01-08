@@ -12,6 +12,7 @@ import { JS_SIMPLIFIED_COURSES_URL } from '@/lib/constants'
 import TextWithCurlyBraces from '../UI/TextWithCurlyBraces'
 import FiveStars from '../UI/FiveStars'
 import CTA from '../UI/CTA'
+import DPFallback from '../../../public/dp-fallback.svg'
 
 const testimonials = [
 	{
@@ -87,7 +88,7 @@ const CarouselNextItemButton = (props: React.ButtonHTMLAttributes<{}>) => {
 	)
 }
 
-const Testimonial = ({ showTopThree = false }: { showTopThree: boolean }) => {
+const Testimonial = ({ showTopThree = false }: { showTopThree?: boolean }) => {
 	const [numberOfItemsPerSlide, setNumberOfItemsPerSlide] = useState(1)
 
 	useEffect(() => {
@@ -197,13 +198,17 @@ const TestimonialItem = ({
 						}}
 					/>
 					<Flex align="center" gap="4">
-						<Image
-							src={testimonial.profile || '/profile-fallback.png'}
-							alt={testimonial.name}
-							width={52}
-							height={52}
-							className="!rounded-full border-2 border-brand-blue"
-						/>
+						{testimonial.profile ? (
+							<Image
+								src={testimonial.profile || '/profile-fallback.png'}
+								alt={testimonial.name}
+								width={52}
+								height={52}
+								className="!rounded-full border-2 border-brand-blue"
+							/>
+						) : (
+							<Image src={DPFallback} alt="profile" />
+						)}
 						<Flex direction="column" gap="2">
 							<Text className="capitalize" size="4">
 								{testimonial.name}
