@@ -20,22 +20,32 @@ import {
 	JS_SIMPLIFIED_BASE_URL,
 	JS_SIMPLIFIED_COURSES_URL,
 } from '@/lib/constants'
+import CTA from '../UI/CTA'
+import TextWithCurlyBraces from '../UI/TextWithCurlyBraces'
 
 const Intro = () => {
 	return (
-		<section className="text-brand-text-dark layer" id="about">
-			<Container>
-				<div className="">
-					<Flex direction="column" gap="6" className="lg:w-[50%]">
+		<section
+			className="relative text-brand-text-dark layer flex flex-col lg:flex-row justify-between items-center lg:items-end !pt-[78px]"
+			id="about"
+		>
+			<div
+				className="block md:hidden h-[calc(100vw)] w-full relative"
+				style={{
+					background:
+						'linear-gradient(180deg, rgba(16, 30, 40, 0.00) 0%, #101E28 100%)',
+				}}
+			>
+				<Image src="/kyle3.png" alt="Kyle Image" fill />
+			</div>
+			<div className="w-full z-10 md:px-10 px-5 md:pt-10 md:pb-20 pb-0 relative -top-[80px] md:top-0">
+				<div className="md:w-[50%]">
+					<Flex direction="column" gap="6" className="">
 						<Box>
 							<HappyCustomers />
 							<Heading weight="bold" mt="5">
-								It&apos; Not About What You Learn, But HOW
-								<br /> You Learn
-								<Text className="text-brand-blue">
-									{' '}
-									&#123; JavaScript &#125;
-								</Text>{' '}
+								How I Stopped Getting Stuck and Mastered{' '}
+								<TextWithCurlyBraces>JavaScript</TextWithCurlyBraces>
 							</Heading>
 						</Box>
 
@@ -54,30 +64,35 @@ const Intro = () => {
 						</Text>
 
 						<Text>
-							But reality hit hard, and I started questioning if coding was
-							really for me. I was stuck, constantly Googling basic issues,
-							thinking I was the problem. It wasn&apos;t until later that I
-							realized that something was off.. The tutorials I followed lacked
-							the essential concepts I needed to truly grasp JavaScript. My
-							practice methods were even worse, causing 99% frustration and 1%
-							progress.....{' '}
-							<Link
-								href={JS_SIMPLIFIED_BASE_URL}
-								target="_blank"
-								className="underline"
-							>
-								Read more
-							</Link>
+							<p>
+								Something was off... I realised that the tutorials I followed
+								lacked the essential concepts I needed to truly grasp
+								JavaScript. My practice methods were even worse, causing 99%
+								frustration and 1% progress.
+							</p>
+							<br />
+							<p>
+								Then in 2015, something clicked. Unlike typical tutorials
+								drowning in JavaScript theory, I found a method which solved the
+								root problem. For 9 years now, I have refined my method with
+								systems thinking, practical projects and mindset development.
+							</p>
+							<br />
+							<p>
+								On YouTube, my coding videos have 130 million views and
+								counting, earning the trust of 1.5 million subscribers. In the
+								process, 40,000+ devs have signed up for 1 of my courses on all
+								things{' '}
+								<Link
+									href={JS_SIMPLIFIED_BASE_URL}
+									target="_blank"
+									className="underline text-[#04A9FF]"
+								>
+									Web Dev Simplified.
+								</Link>
+							</p>
 						</Text>
-
-						<Link href={JS_SIMPLIFIED_COURSES_URL} target="_blank">
-							<Button
-								textClassName="uppercase text-brand-white"
-								rightIcon={<Image src={RightArrow} alt="arrow" />}
-							>
-								Start learning now
-							</Button>
-						</Link>
+						<CTA />
 					</Flex>
 				</div>
 				{/* <div className="basis-[830px] shrink-0 relative">
@@ -98,7 +113,7 @@ const Intro = () => {
 					on my own I get stuck.”
 					</TestimonialBox>
 				</div> */}
-			</Container>
+			</div>
 		</section>
 	)
 }

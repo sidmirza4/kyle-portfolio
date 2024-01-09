@@ -121,19 +121,22 @@ const Included = () => {
 				<Flex justify="center">
 					<Tabs
 						defaultValue={tabsData[0].value}
-						className="text-2 flex flex-col md:flex-row w-full items-center justify-center"
+						className="text-2 flex flex-col md:flex-row w-full items-center justify-center relative"
 						orientation="vertical"
 					>
 						<TabsList
 							className="justify-between flex flex-row md:flex-col gap-2 px-0 py-5 h-fit m-5 w-full md:w-[22%]"
 							data--orientation="vertical"
 						>
-							{tabsData.map((t) => (
-								<TabsTrigger key={t.heading} value={t.value}>
-									{t.heading}
-								</TabsTrigger>
-							))}
+							<>
+								{tabsData.map((t) => (
+									<TabsTrigger key={t.heading} value={t.value}>
+										{t.heading}
+									</TabsTrigger>
+								))}
+							</>
 						</TabsList>
+						<div className="block md:hidden border-b border-b-[rgba(255,255,255,0.2)] w-full absolute top-[97.5px]"></div>
 						{tabsData.map((t) => (
 							<TabsContent key={t.value} value={t.value}>
 								<TabItem t={t} />
