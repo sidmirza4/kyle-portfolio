@@ -90,7 +90,7 @@ const FAQ = () => {
 				<div className="mx-auto max-w-3xl">
 					<Accordion type="single" collapsible className="w-full">
 						{faqs.map((f) => (
-							<>
+							<div key={f.question}>
 								<AccordionItem value={f.question} key={f.question}>
 									<AccordionTrigger className="text-left !text-4">
 										{f.question}
@@ -100,7 +100,7 @@ const FAQ = () => {
 									</AccordionContent>
 								</AccordionItem>
 								<div className="border-b border-[#1C2D38]" />
-							</>
+							</div>
 						))}
 					</Accordion>
 				</div>

@@ -17,27 +17,10 @@ import CTA from './UI/CTA'
 const Navbar = () => {
 	return (
 		<Container className="bg-[#141D25] block relative border-b border-[#ffffff21] border-opacity-10 md:px-5 px-8 xl:px-0 !text-brand-white h-[85px] justify-center">
-			<Flex justify="between" align="center">
-				{/* <div className="md:hidden shrink">
-					<Popover>
-						<PopoverTrigger>
-							<Image src={Hamburger} alt="hamburger" />
-						</PopoverTrigger>
-						<PopoverContent className="rounded-7 border-none text-brand-white bg-brand-bg-light">
-							<NavbarLinks />
-							<div className="mt-2">
-								<LoginButton />
-							</div>
-						</PopoverContent>
-					</Popover>
-				</div> */}
-
+			<div className="flex">
 				<div className="absolute bottom-0">
 					<Image src="/logo.png" width={82} height={62} alt="logo" />
 				</div>
-				{/* <div className="hidden md:block">
-					<NavbarLinks />
-				</div> */}
 
 				<div className="flex items-center gap-9 ml-auto">
 					<LoginButton />
@@ -45,7 +28,7 @@ const Navbar = () => {
 						<CTA size="md" />
 					</div>
 				</div>
-			</Flex>
+			</div>
 		</Container>
 	)
 }
@@ -53,16 +36,7 @@ const Navbar = () => {
 const LoginButton = () => {
 	return (
 		<Link href={JS_SIMPLIFIED_LOGIN} target="_blank">
-			{/* <Flex gap="4" align="center"> */}
 			<Text>Login</Text>
-			{/* <Image
-					src="/login.svg"
-					alt="login"
-					height={30}
-					width={30}
-					className="ml-4 md:ml-0"
-				/> */}
-			{/* </Flex> */}
 		</Link>
 	)
 }
