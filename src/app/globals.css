@@ -60,11 +60,20 @@ h6 {
 	color: white;
 	background-color: #101E28;
 	background-image: none;
+	
+
 	@screen md {
-		background: url('/kyle2.png'), #101E28;
-		background-size: 100%;
-		background-size: contain;
-		background-position: right;
+		background: url('/kyle-intro.png'), #101E28;
+		background-size: 120%;
+		background-position: right bottom;
 		background-repeat: no-repeat;
 	};
+
+	@screen lg {
+		background-size: 90%;
+	}
+
+	@screen xl {
+		padding-left: 100px;
+	}
 }
