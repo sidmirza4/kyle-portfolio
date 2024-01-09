@@ -16,7 +16,7 @@ import CTA from './UI/CTA'
 
 const Navbar = () => {
 	return (
-		<Container className="bg-[#141D25] block relative border-b border-[#ffffff21] border-opacity-10 md:px-5 px-8 xl:px-0 !text-brand-white h-[85px] justify-center">
+		<Container className="bg-[#141D25] relative border-b border-[#ffffff21] border-opacity-10 md:px-5 px-8 xl:px-0 !text-brand-white h-[85px] justify-center">
 			<div className="flex">
 				<div className="absolute bottom-0">
 					<Image src="/logo.png" width={82} height={62} alt="logo" />
