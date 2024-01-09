@@ -19,6 +19,7 @@ import Link from 'next/link'
 import {
 	JS_SIMPLIFIED_BASE_URL,
 	JS_SIMPLIFIED_COURSES_URL,
+	WEB_DEV_SIMPLIFIED_YOUTUBE,
 } from '@/lib/constants'
 import CTA from '../UI/CTA'
 import TextWithCurlyBraces from '../UI/TextWithCurlyBraces'
@@ -84,9 +85,9 @@ const Intro = () => {
 								process, 40,000+ devs have signed up for 1 of my courses on all
 								things{' '}
 								<Link
-									href={JS_SIMPLIFIED_BASE_URL}
+									href={WEB_DEV_SIMPLIFIED_YOUTUBE}
 									target="_blank"
-									className="underline text-[#04A9FF]"
+									className="underline text-brand-blue-dark"
 								>
 									Web Dev Simplified.
 								</Link>

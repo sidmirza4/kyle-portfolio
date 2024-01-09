@@ -100,7 +100,7 @@ const packages = [
 const Pricing = () => {
 	return (
 		<Section
-			className="!py-10 md:!py-[100px] text-brand-text-dark bg-blue-gradient"
+			className="!py-10 md:!py-[100px] text-brand-text-dark bg-blue-gradient-reverse"
 			id="packages"
 		>
 			<Container>

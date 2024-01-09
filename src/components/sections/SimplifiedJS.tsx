@@ -7,7 +7,7 @@ import TextWithCurlyBraces from '../UI/TextWithCurlyBraces'
 
 const SimplifiedJS = () => {
 	return (
-		<Section className="text-brand-text-dark pt-[105px] !pb-[66px] md:!pb-20 bg-blue-gradient px-4 sm:px-14 lg:px-0">
+		<Section className="text-brand-text-dark !pt-12 md:!pt-[105px] !pb-[66px] md:!pb-20 bg-blue-gradient px-4 sm:px-14 lg:px-0">
 			<Container>
 				<Flex direction="column">
 					<Flex justify="center">

@@ -12,3 +12,5 @@ export const INTERVIEW_LIST =
 	'https://javascriptsimplified.com/interview-table-of-contents'
 export const QUOKKA_JS = 'https://quokkajs.com/'
 export const JS_SIMPLIFIED_PRICING = 'https://javascriptsimplified.com/#pricing'
+export const WEB_DEV_SIMPLIFIED_YOUTUBE =
+	'https://www.youtube.com/@WebDevSimplified'
